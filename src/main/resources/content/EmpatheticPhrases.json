@@ -1,0 +1,99 @@
+{
+        "socialEmpatheticPhrases": ["ah super !",
+									"super !",
+									"bien !",
+									"ah c'est sympa.",
+									"c'est sympa.",
+									"umm, c'est sympa.",
+									"umm c'est bien d'entendre ça.",
+									"vous vous en sortez bien.",
+									"ah c'est merveilleux à entendre.",
+									"umm c'est bien alors.",
+									"ah ça a l’air vraiment bien !",
+									"c'est super à entendre !",
+									"Je suis content d'entendre ça.",
+									"ça a l’air vraiment sympa.",
+									"umm, sympa.",
+									"ah sympa.",
+									"ça a l’air vraiment bien !",
+									"C'est vraiment cool."
+									],
+        "happyEmpatheticPhrases": ["ah super !",
+									"super !",
+									"bien !",
+									"ah c'est sympa.",
+									"c'est sympa.",
+									"ah ça a l'air intéressant.",
+									"c'est chouette d'entendre ça.",
+									"vous vous en sortez bien.",
+									"ah c'est merveilleux à entendre.",
+									"umm c'est bien alors.",
+									"ah ça a l’air vraiment bien !",
+									"ça n’a pas l’air mal.",
+									"c'est super à entendre !",
+									"Je suis content d'entendre ça.",
+									"umm C'est une bonne chose.",
+									"ah ça a l'air génial !.",
+									"Génial !",
+									"ah c'est toujours agréable d'accomplir quelque chose comme ça. ",
+									"C'est génial !",
+									"ça a l’air vraiment sympa.",
+									"umm, sympa.",
+									"ah sympa.",
+									"ça a l’air vraiment bien !",
+									"C'est vraiment cool.",									
+									"On dirait que vous vous êtes super bien débrouillé."
+									],
+									
+		"sadEmpatheticPhrases"  : ["oh ! c'est pas génial.",
+									"oh ! c'est malheureux.",
+									"oh c'est dur.",
+									"oh ça a dû être dur pour vous.",
+									"ça a l'air vraiment éprouvant !",
+									"cela a dû être si difficile.",
+									"ça a l'air vraiment difficile.",
+									"je peux voir comment cela a pu être difficile.",
+									"ce genre de chose n'est jamais facile.",
+									"je suis vraiment désolé d'entendre ça.", 
+									"oh non, je suis vraiment désolé d'entendre ça", 
+									"Je suis désolé d'apprendre que vous avez subi",
+									"Merci, ça n'a pas toujours été facile !",
+									"Oh non, je suis désolé d'entendre ça.",
+									"ça a dû être dur pour vous.",
+									"Oui, c'est une chose difficile à gérer.",
+									"Ça doit être si difficile.",
+									"oh non, je suis vraiment désolée d'entendre ça. Cela a dû être très difficile pour vous."
+									],
+        
+         "encouragingEmpatheticPhrases" :["Tu es courageux/courageuse.",
+											"tu es fort(e).",
+											"tu es un battant/une battante.",
+											" J'espère que les choses vont mieux désormais.",
+											"J'espère que tout se passe mieux désormais.",
+											"D'une manière ou d'une autre, à travers tout ça tu continues à avancer.",
+											"Tu es courageux/courageuse. D'une manière ou d'une autre, à travers tout ça.",
+											"tu continues à avancer.",
+											"J'espère que ça va mieux désormais !",
+											"j'espère que tout se passe bien maintenant !",
+											"J'espère que vous vous sentez mieux.",
+											"J'espère que tout se passe mieux maintenant."
+											],
+         
+         
+         "showInterestEmpatheticPrases" : ["Comment est-ce que ça a été pour vous ?",
+											"Pourriez-vous développer, s'il vous plaît, comment vous l’avez vécu ?", 
+											 "Je veux être sûr de comprendre... Comment avez-vous vécu cela ?",
+											"Pourriez-vous développer, s'il vous plaît, je veux être sûr de comprendre." 
+											],
+         
+         "gratitudeEmpatheticPhrases" :  ["Merci d'avoir partagé cela avec moi.",
+										"Je suis heureux que vous me l'ayez dit.",
+										"Merci de m'avoir fait confiance. Cela signifie vraiment beaucoup.",
+										"Ça doit être difficile d'en parler. Merci de vous être ouvert(e) à moi."
+										]
+
+
+
+
+}
+

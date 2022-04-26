@@ -14,6 +14,10 @@ data class Welcome7 (
     val sadEmpatheticPhrases: List<String>,
     val encouragingEmpatheticPhrases: List<String>,
     val showInterestEmpatheticPrases: List<String>,
+    val showAngerEmpatheticPhrases: List<String>,
+    val showDisgustEmpatheticPhrases: List<String>,
+    val showFearEmpatheticPhrases: List<String>,
+    val showSurpriseEmpatheticPhrases: List<String>,
     val gratitudeEmpatheticPhrases: List<String>
 ) {
     public fun toJson() = klaxon.toJsonString(this)

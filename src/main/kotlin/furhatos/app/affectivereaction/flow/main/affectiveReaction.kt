@@ -54,11 +54,11 @@ val WoZ : State = state(Parent) {
     }
 
     onResponse {
-//        furhat.glance(it.userId)
+        furhat.attend(it.userId)
         furhat.say {
-            +"${William.Vocal.HMM_YES}, je vous ai entendu."
+            +"je vous ai entendu."
             +Gestures.Wink
-            +"vous avez dit ${it.text}"
+//            +"vous avez dit ${it.text}"
         }
     }
 
@@ -112,6 +112,42 @@ val WoZ : State = state(Parent) {
             +Gestures.Nod
             if (welcome7 != null) {
                 +welcome7.gratitudeEmpatheticPhrases.random().toString()
+            }
+        }
+    }
+
+    onButton(label = "FEAR", section = Section.RIGHT, color = Color.Red) {
+        furhat.say {
+            +Gestures.ExpressFear
+            if (welcome7 != null) {
+                +welcome7.showFearEmpatheticPhrases.random().toString()
+            }
+        }
+    }
+
+    onButton(label = "ANGER", section = Section.RIGHT, color = Color.Red) {
+        furhat.say {
+            +Gestures.ExpressAnger
+            if (welcome7 != null) {
+                +welcome7.showAngerEmpatheticPhrases.random().toString()
+            }
+        }
+    }
+
+    onButton(label = "DISGUST", section = Section.RIGHT, color = Color.Red) {
+        furhat.say {
+            +Gestures.ExpressDisgust
+            if (welcome7 != null) {
+                +welcome7.showDisgustEmpatheticPhrases.random().toString()
+            }
+        }
+    }
+
+    onButton(label = "SURPRISE", section = Section.RIGHT, color = Color.Red) {
+        furhat.say {
+            +Gestures.Surprise
+            if (welcome7 != null) {
+                +welcome7.showSurpriseEmpatheticPhrases.random().toString()
             }
         }
     }

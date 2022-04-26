@@ -85,7 +85,30 @@
 											 "Je veux être sûr de comprendre... Comment avez-vous vécu cela ?",
 											"Pourriez-vous développer, s'il vous plaît, je veux être sûr de comprendre." 
 											],
-         
+		"showAngerEmpatheticPhrases" : [
+			"Je n'arrive pas à y croire !",
+			"Je trouve ça terrible",
+			"Je n'en ai assez d'entendre ça ",
+			"C'est de la poudre de perlimpimpin !"
+		],
+		"showDisgustEmpatheticPhrases" : [
+			"C'est ignoble !",
+			"C'est horrible",
+			"Oh non !",
+			"Beurk !"
+		],
+
+		"showFearEmpatheticPhrases" : [
+			"C'est terrifiant !",
+			"Je n'arrive pas à y croire",
+			"Cela doit être traumatisant",
+			"Aaah !"
+		],
+		"showSurpriseEmpatheticPhrases" : [
+			"C'est incroyable !",
+			"Je ne savais pas",
+			"Aaah !"
+		],
          "gratitudeEmpatheticPhrases" :  ["Merci d'avoir partagé cela avec moi.",
 										"Je suis heureux que vous me l'ayez dit.",
 										"Merci de m'avoir fait confiance. Cela signifie vraiment beaucoup.",

@@ -80,7 +80,7 @@
 											],
          
          
-         "showInterestEmpatheticPrases" : ["Comment est-ce que ça a été pour vous ?",
+         "showInterestEmpatheticPhrases" : ["Comment est-ce que ça a été pour vous ?",
 											"Pourriez-vous développer, s'il vous plaît, comment vous l’avez vécu ?", 
 											 "Je veux être sûr de comprendre... Comment avez-vous vécu cela ?",
 											"Pourriez-vous développer, s'il vous plaît, je veux être sûr de comprendre." 
@@ -88,8 +88,9 @@
 		"showAngerEmpatheticPhrases" : [
 			"Je n'arrive pas à y croire !",
 			"Je trouve ça terrible",
-			"Je n'en ai assez d'entendre ça ",
-			"C'est de la poudre de perlimpimpin !"
+			"J'en ai assez d'entendre ça ",
+			"C'est de la poudre de perlimpimpin !",
+			"Sébastien, arrête!"
 		],
 		"showDisgustEmpatheticPhrases" : [
 			"C'est ignoble !",

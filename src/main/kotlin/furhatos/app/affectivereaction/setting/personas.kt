@@ -18,8 +18,8 @@ fun FlowControlRunner.activate(persona: Persona) {
     }
 
     for (face in persona.face) {
-        if (furhat.faces.get(persona.mask)?.contains(face)!!){
-            furhat.setCharacter(face)
+        if (furhat.faces[persona.mask]?.contains(face)!!){
+            furhat.character = face
             break
         }
     }
@@ -27,6 +27,6 @@ fun FlowControlRunner.activate(persona: Persona) {
 
 val mainPersona = Persona(
     name = "Host",
-    face = listOf("Alex"),
-    voice = listOf(PollyVoice.Lea(),PollyVoice.Mathieu()).shuffled() // randomize what voice to select
+    face = listOf("Titan"),
+    voice = listOf(PollyVoice.Lea(),PollyVoice.Chantal(),PollyVoice.Celine()).shuffled() as List<Voice> // randomize what voice to select
 )

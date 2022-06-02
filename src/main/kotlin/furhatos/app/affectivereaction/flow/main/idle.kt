@@ -1,6 +1,8 @@
 package furhatos.app.affectivereaction.flow.main
 
 import furhatos.flow.kotlin.*
+import furhatos.gestures.Gestures
+import furhatos.nlu.common.Greeting
 
 val Idle: State = state {
 
@@ -11,7 +13,7 @@ val Idle: State = state {
                 goto(WoZ)
             }
             users.count == 0 && furhat.isVirtual() -> furhat.say("I can't see anyone. Add a virtual user please. ")
-            users.count == 0 && !furhat.isVirtual() -> furhat.say("I can't see anyone. Step closer please. ")
+            users.count == 0 && !furhat.isVirtual() -> furhat.say("Je ne vois personne, pouvez-vous vous rapprocher ?")
         }
     }
 

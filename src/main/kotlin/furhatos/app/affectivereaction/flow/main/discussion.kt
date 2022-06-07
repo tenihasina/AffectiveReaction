@@ -1,5 +1,6 @@
 package furhatos.app.affectivereaction.flow.main
 
+import furhatos.app.affectivereaction.flow.Init
 import furhatos.app.affectivereaction.flow.Parent
 import furhatos.app.affectivereaction.util.dialogueCues
 import furhatos.flow.kotlin.*
@@ -94,5 +95,9 @@ val Discussion : State = state(Parent) {
 
     onButton(label = "SUMMARY", section = Section.LEFT, color = Color.Yellow) {
         goto(Summary)
+    }
+
+    onButton(label = "MAIN", section = Section.LEFT, color = Color.Red) {
+        goto(Init)
     }
 }

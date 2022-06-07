@@ -1,5 +1,6 @@
 package furhatos.app.affectivereaction.flow.main
 
+import furhatos.app.affectivereaction.flow.Init
 import furhatos.app.affectivereaction.flow.Parent
 import furhatos.app.affectivereaction.setting.*
 
@@ -146,5 +147,9 @@ val WoZ : State = state(Parent) {
                 +dialogueCues.showSurpriseEmpatheticPhrases.random().toString()
             }
         }
+    }
+
+    onButton(label = "MAIN", section = Section.LEFT, color = Color.Yellow) {
+        goto(Init)
     }
 }

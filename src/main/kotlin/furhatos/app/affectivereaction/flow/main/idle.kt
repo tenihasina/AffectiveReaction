@@ -1,5 +1,6 @@
 package furhatos.app.affectivereaction.flow.main
 
+import furhatos.app.affectivereaction.flow.Init
 import furhatos.flow.kotlin.*
 import furhatos.gestures.Gestures
 import furhatos.nlu.common.Greeting
@@ -23,6 +24,6 @@ val Idle: State = state {
 
     onUserEnter {
         furhat.attend(it)
-        goto(WoZ)
+        goto(Init)
     }
 }

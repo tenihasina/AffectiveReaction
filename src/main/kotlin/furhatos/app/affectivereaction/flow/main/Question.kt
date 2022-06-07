@@ -4,22 +4,18 @@ class Question(questions: List<String>) {
     private val listQ = questions
     private var poolAskedQuestions = mutableSetOf<String>()
     private var poolNextQuestions = listQ.toMutableSet()
+    private var question = ""
 
     fun nextQuestion(): String{
-        val question = listQ.random().toString()
-
-        if (poolNextQuestions.contains(question)) {
-
-            poolNextQuestions.filter { it == question }.forEach { poolNextQuestions.remove(it) }
+        if (poolNextQuestions.isNotEmpty()){
+            question = poolNextQuestions.random().toString()
+            poolNextQuestions.remove(question)
             poolAskedQuestions.add(question)
-
-        } else if (poolNextQuestions.isEmpty()) {
-
+        } else {
             poolNextQuestions.addAll(poolAskedQuestions)
+            question = poolNextQuestions.random().toString()
             poolAskedQuestions = mutableSetOf()
-
         }
-
         return question
     }
 }

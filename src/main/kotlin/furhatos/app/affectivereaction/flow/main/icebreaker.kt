@@ -1,5 +1,6 @@
 package furhatos.app.affectivereaction.flow.main
 
+import furhatos.app.affectivereaction.flow.Init
 import furhatos.app.affectivereaction.flow.Parent
 import furhatos.app.affectivereaction.setting.location_CENTER
 import furhatos.app.affectivereaction.setting.location_LEFT
@@ -67,5 +68,9 @@ val IceBreaker : State = state(Parent) {
 //            listPositions.forEach { furhat.attend(it) }
         }
         goto(Discussion)
+    }
+
+    onButton(label = "MAIN", section = Section.LEFT, color = Color.Yellow) {
+        goto(Init)
     }
 }

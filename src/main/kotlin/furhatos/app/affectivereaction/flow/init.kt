@@ -2,6 +2,7 @@ package furhatos.app.affectivereaction.flow
 
 import furhatos.app.affectivereaction.flow.main.IceBreaker
 import furhatos.app.affectivereaction.flow.main.Idle
+import furhatos.app.affectivereaction.flow.main.Summary
 import furhatos.app.affectivereaction.flow.main.WoZ
 import furhatos.app.affectivereaction.setting.activate
 import furhatos.app.affectivereaction.setting.distanceToEngage
@@ -20,7 +21,18 @@ val Init : State = state() {
 //        furhat.voice = Voice("Lea-Neural")
         activate(mainPersona)
         /** start the interaction */
+        //        goto(WoZ)
+    }
+
+    onButton(label = "ICE BREAKER", section = Section.RIGHT, color = Color.Blue) {
         goto(IceBreaker)
-//        goto(WoZ)
+    }
+
+    onButton(label = "INDIVIDUAL REACTION", section = Section.RIGHT, color = Color.Red) {
+        goto(WoZ)
+    }
+
+    onButton(label = "SUMMARY", section = Section.RIGHT, color = Color.Yellow) {
+        goto(Summary)
     }
 }

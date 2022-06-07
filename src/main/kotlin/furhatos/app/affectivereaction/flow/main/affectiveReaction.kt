@@ -1,7 +1,8 @@
 package furhatos.app.affectivereaction.flow.main
 
-import furhatos.app.affectivereaction.flow.Init
+import furhatos.app.affectivereaction.flow.Menu
 import furhatos.app.affectivereaction.flow.Parent
+import furhatos.app.affectivereaction.flow.backToMenuButton
 import furhatos.app.affectivereaction.setting.*
 
 import furhatos.app.affectivereaction.util.dialogueCues
@@ -12,31 +13,10 @@ import furhatos.nlu.common.Yes
 import furhatos.records.Location
 import furhatos.util.random
 
-val turn_distribution = listOf("Qu'en pensez vous ?", "Est-ce que cela vous parle ?", "")
 
 val WoZ : State = state(Parent) {
 
-    onButton(label = "LEFT", section = Section.LEFT, color = Color.Blue) {
 
-        with(furhat) {
-            attend(location_LEFT)
-            ask(turn_distribution.random().toString())
-        }
-    }
-
-    onButton(label = "RIGHT", section = Section.LEFT, color = Color.Blue) {
-        with(furhat) {
-            attend(location_RIGHT)
-            ask(turn_distribution.random().toString())
-        }
-    }
-
-    onButton(label = "FRONT", section = Section.LEFT, color = Color.Blue) {
-        with(furhat) {
-            attend(location_CENTER)
-            ask(turn_distribution.random().toString())
-        }
-    }
 
     onResponse<Yes> {
         if (dialogueCues != null) {
@@ -149,7 +129,7 @@ val WoZ : State = state(Parent) {
         }
     }
 
-    onButton(label = "MAIN", section = Section.LEFT, color = Color.Yellow) {
-        goto(Init)
+    onButton(backToMenuButton.copy(label = "MAIN")) {
+        goto(Menu)
     }
 }

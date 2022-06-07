@@ -1,9 +1,6 @@
 package furhatos.app.affectivereaction.flow
 
-import furhatos.app.affectivereaction.flow.main.IceBreaker
-import furhatos.app.affectivereaction.flow.main.Idle
-import furhatos.app.affectivereaction.flow.main.Summary
-import furhatos.app.affectivereaction.flow.main.WoZ
+import furhatos.app.affectivereaction.flow.main.*
 import furhatos.app.affectivereaction.setting.activate
 import furhatos.app.affectivereaction.setting.distanceToEngage
 import furhatos.app.affectivereaction.setting.mainPersona
@@ -13,7 +10,9 @@ import furhatos.flow.kotlin.voice.Voice
 import furhatos.util.Gender
 import furhatos.util.Language
 
-val Init : State = state() {
+val navigationButton = Button(label = "navigation button", section = Section.LEFT, color = Color.Blue)
+val backToMenuButton = Button(label = "back to menu", section = Section.LEFT, color = Color.Yellow)
+val Menu : State = state() {
     init {
         /** Set our default interaction parameters */
         users.setSimpleEngagementPolicy(distanceToEngage, maxNumberOfUsers)
@@ -24,15 +23,15 @@ val Init : State = state() {
         //        goto(WoZ)
     }
 
-    onButton(label = "ICE BREAKER", section = Section.RIGHT, color = Color.Blue) {
+    onButton(navigationButton.copy(label = "ICE BREAKER")) {
         goto(IceBreaker)
     }
 
-    onButton(label = "INDIVIDUAL REACTION", section = Section.RIGHT, color = Color.Red) {
-        goto(WoZ)
+    onButton(navigationButton.copy(label = "REACTIONS")) {
+        goto(Discussion)
     }
 
-    onButton(label = "SUMMARY", section = Section.RIGHT, color = Color.Yellow) {
+    onButton(navigationButton.copy(label = "SUMMARY")) {
         goto(Summary)
     }
 }

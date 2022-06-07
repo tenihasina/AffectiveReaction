@@ -6,7 +6,7 @@ import furhatos.flow.kotlin.*
 
 class AffectivereactionSkill : Skill() {
     override fun start() {
-        Flow().run(Init)
+        Flow().run(Menu)
     }
 }
 

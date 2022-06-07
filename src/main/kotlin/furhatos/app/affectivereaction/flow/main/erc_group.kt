@@ -7,7 +7,7 @@ import furhatos.flow.kotlin.state
 
 
 val Summary : State = state {
-    onButton(label = "DISCUSSION", section = Section.RIGHT, color = Color.Blue){
+    onButton(label = "REACTIONS", section = Section.RIGHT, color = Color.Blue){
         goto(Discussion)
     }
 }

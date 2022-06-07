@@ -1,7 +1,9 @@
 package furhatos.app.affectivereaction.flow.main
 
-import furhatos.app.affectivereaction.flow.Init
+import furhatos.app.affectivereaction.flow.Menu
 import furhatos.app.affectivereaction.flow.Parent
+import furhatos.app.affectivereaction.flow.backToMenuButton
+import furhatos.app.affectivereaction.flow.navigationButton
 import furhatos.app.affectivereaction.setting.location_CENTER
 import furhatos.app.affectivereaction.setting.location_LEFT
 import furhatos.app.affectivereaction.setting.location_RIGHT
@@ -9,33 +11,35 @@ import furhatos.app.affectivereaction.util.iceBreaker
 import furhatos.flow.kotlin.*
 import furhatos.util.random
 
+val turnButton = Button(label = "turn management", section = Section.RIGHT, color = Color.Green)
+val speakButton = Button(label = "speech", section = Section.RIGHT, color = Color.Red)
+val question = iceBreaker?.let { Question(it.Ukraine ) }
 
 val IceBreaker : State = state(Parent) {
-    val question = iceBreaker?.let { Question(it.Ukraine ) }
 
-    onButton(label = "LEFT", section = Section.LEFT, color = Color.Blue) {
+    onButton(turnButton.copy(label = "LEFT")) {
 
         with(furhat) {
             attend(location_LEFT)
-            ask(turn_distribution.random().toString())
+            ask(Question(turn_distribution).nextQuestion())
         }
     }
 
-    onButton(label = "RIGHT", section = Section.LEFT, color = Color.Blue) {
+    onButton(turnButton.copy(label = "RIGHT")) {
         with(furhat) {
             attend(location_RIGHT)
-            ask(turn_distribution.random().toString())
+            ask(Question(turn_distribution).nextQuestion())
         }
     }
 
-    onButton(label = "FRONT", section = Section.LEFT, color = Color.Blue) {
+    onButton(turnButton.copy(label = "FRONT")) {
         with(furhat) {
             attend(location_CENTER)
-            ask(turn_distribution.random().toString())
+            ask(Question(turn_distribution).nextQuestion())
         }
     }
 
-    onButton(label = "CONTEXT", section = Section.LEFT, color = Color.Yellow) {
+    onButton(speakButton.copy(label = "CONTEXT")) {
 
         with(furhat) {
 
@@ -45,7 +49,7 @@ val IceBreaker : State = state(Parent) {
         }
     }
 
-    onButton(label = "QUESTION", section = Section.LEFT, color = Color.Green) {
+    onButton(speakButton.copy(label = "QUESTION")) {
 
         with(furhat) {
             if (question != null) {
@@ -61,7 +65,7 @@ val IceBreaker : State = state(Parent) {
 
 
 
-    onButton(label = "END ICE BREAKER", section = Section.RIGHT, color = Color.Red) {
+    onButton(navigationButton.copy(label = "END ICE BREAKER")) {
         with(furhat) {
             attendAll()
             say("Maintenant que nous disposons de plus de contexte sur le sujet, passons à des questions plus tranchées.")
@@ -70,7 +74,7 @@ val IceBreaker : State = state(Parent) {
         goto(Discussion)
     }
 
-    onButton(label = "MAIN", section = Section.LEFT, color = Color.Yellow) {
-        goto(Init)
+    onButton(backToMenuButton.copy(label = "MAIN")) {
+        goto(Menu)
     }
 }

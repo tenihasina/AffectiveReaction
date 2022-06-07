@@ -9,13 +9,17 @@ class Question(questions: List<String>) {
     fun nextQuestion(): String{
         if (poolNextQuestions.isNotEmpty()){
             question = poolNextQuestions.random().toString()
-            poolNextQuestions.remove(question)
-            poolAskedQuestions.add(question)
         } else {
             poolNextQuestions.addAll(poolAskedQuestions)
             question = poolNextQuestions.random().toString()
             poolAskedQuestions = mutableSetOf()
         }
+        updatePools()
         return question
+    }
+
+    private fun updatePools() {
+        poolNextQuestions.remove(question)
+        poolAskedQuestions.add(question)
     }
 }

@@ -14,7 +14,7 @@ import furhatos.util.random
 
 
 val reactionButton = Button(label = "reaction button", section = Section.RIGHT, color = Color.Red)
-val turn_distribution = listOf("Qu'en pensez vous ?", "Est-ce que cela vous parle ?", "")
+val turn_distribution = listOf("Qu'en pensez vous ?", "Est-ce que cela vous parle ?", "Et vous ?")
 
 
 val Discussion : State = state(Parent) {
@@ -24,21 +24,21 @@ val Discussion : State = state(Parent) {
 
         with(furhat) {
             attend(location_LEFT)
-            ask(turn_distribution.random().toString())
+            ask(Question(turn_distribution).nextQuestion())
         }
     }
 
     onButton(turnButton.copy(label = "RIGHT")) {
         with(furhat) {
             attend(location_RIGHT)
-            ask(turn_distribution.random().toString())
+            ask(Question(turn_distribution).nextQuestion())
         }
     }
 
     onButton(turnButton.copy(label = "FRONT")) {
         with(furhat) {
             attend(location_CENTER)
-            ask(turn_distribution.random().toString())
+            ask(Question(turn_distribution).nextQuestion())
         }
     }
 

@@ -6,7 +6,7 @@ import com.beust.klaxon.*
 private val klaxon = Klaxon()
 const val file_groupJson = "/content/GroupSummary.json"
 
-data class GroupJson(
+data class groupJson(
     val PPP: List<String>,
     val OOO: List<String>,
     val NNN: List<String>,
@@ -19,8 +19,8 @@ data class GroupJson(
     val NNP: List<String>
 ) {
     companion object {
-        public fun fromJson(json: String) = klaxon.parse<GroupJson>(json)
+        public fun fromJson(json: String) = klaxon.parse<groupJson>(json)
     }
 }
 
-val groupSummary = GroupJson.fromJson(AffectivereactionSkill::class.java.getResource(file_groupJson).readText())
+val groupSummary = groupJson.fromJson(AffectivereactionSkill::class.java.getResource(file_groupJson).readText())

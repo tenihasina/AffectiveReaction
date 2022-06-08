@@ -1,12 +1,11 @@
 package furhatos.app.affectivereaction.flow
 
 import furhatos.app.affectivereaction.flow.main.*
-import furhatos.app.affectivereaction.setting.activate
-import furhatos.app.affectivereaction.setting.distanceToEngage
-import furhatos.app.affectivereaction.setting.mainPersona
-import furhatos.app.affectivereaction.setting.maxNumberOfUsers
+import furhatos.app.affectivereaction.setting.*
 import furhatos.flow.kotlin.*
 import furhatos.flow.kotlin.voice.Voice
+import furhatos.gestures.Gestures
+import furhatos.nlu.common.AskName
 import furhatos.util.Gender
 import furhatos.util.Language
 
@@ -33,5 +32,9 @@ val Menu : State = state() {
 
     onButton(navigationButton.copy(label = "SUMMARY")) {
         goto(Summary)
+    }
+
+    onButton(navigationButton.copy(label = "INTRO")){
+        goto(Introduction)
     }
 }

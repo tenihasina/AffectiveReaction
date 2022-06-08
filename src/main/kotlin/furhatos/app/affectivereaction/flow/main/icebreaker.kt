@@ -4,13 +4,11 @@ import furhatos.app.affectivereaction.flow.Menu
 import furhatos.app.affectivereaction.flow.Parent
 import furhatos.app.affectivereaction.flow.backToMenuButton
 import furhatos.app.affectivereaction.flow.navigationButton
-import furhatos.app.affectivereaction.setting.listPositions
-import furhatos.app.affectivereaction.setting.location_CENTER
-import furhatos.app.affectivereaction.setting.location_LEFT
-import furhatos.app.affectivereaction.setting.location_RIGHT
+import furhatos.app.affectivereaction.setting.*
 import furhatos.app.affectivereaction.util.iceBreaker
 import furhatos.flow.kotlin.*
-import furhatos.util.random
+import furhatos.gestures.Gestures
+import furhatos.nlu.common.TellName
 
 val turnButton = Button(label = "turn management", section = Section.RIGHT, color = Color.Green)
 val speakButton = Button(label = "speech", section = Section.RIGHT, color = Color.Red)
@@ -60,10 +58,6 @@ val IceBreaker : State = state(Parent) {
 
         with(furhat) {
             if (question != null) {
-//                listOf("virtual-user-0","virtual-user-1","virtual-user-2").forEach {
-//                    furhat.attend(it, eyesOnly = false)
-//                say("")
-//                }
                 glanceAll(furhat)
                 say(question.nextQuestion())
             }
@@ -84,4 +78,64 @@ val IceBreaker : State = state(Parent) {
     onButton(backToMenuButton.copy(label = "MAIN")) {
         goto(Menu)
     }
+
+    onButton(navigationButton.copy(label = "INTRO")){
+        goto(Introduction)
+    }
+}
+
+val Introduction : State = state {
+
+    onButton(turnButton.copy(label = "NAME ?")){
+
+        with(furhat){
+            Gestures.Thoughtful
+            if (listParticipants.isEmpty()){
+                ask("Pouvez vous me donner votre prénom ?")
+            } else {
+                ask ("Et vous")
+            }
+        }
+    }
+
+    onResponse<TellName>{
+        val name = it.intent.name.toString()
+        if (name != null) {
+            listParticipants.add(name)
+            with(furhat){
+                Gestures.BigSmile(duration = 3000.0)
+                say("Enchanté $name")
+                mapParticipants.put(listPositions[listParticipants.size-1], name)
+            }
+        }
+
+    }
+
+    onButton(speakButton.copy(label = "MEMORIZE ALL NAMES")){
+        with(furhat){
+            if (listParticipants.isNotEmpty()){
+                Gestures.Roll
+                say("Pour l'instant, j'ai retenu ${listParticipants.size} noms ")
+                mapParticipants.forEach{
+                    furhat.attend(it.key)
+                    furhat.say(it.value)
+                }
+            } else
+                say("Je n'ai pas retenu de noms désolé")
+
+        }
+    }
+
+        onButton(speakButton.copy(label = "RESET NAMES")){
+        listParticipants = mutableListOf()
+        with(furhat){
+            Gestures.CloseEyes(duration = 3000.0)
+            say("Je vais effacer les noms de ma mémoire")
+        }
+    }
+
+    onButton(navigationButton.copy(label = "ICE BREAKER")) {
+        goto(IceBreaker)
+    }
+
 }

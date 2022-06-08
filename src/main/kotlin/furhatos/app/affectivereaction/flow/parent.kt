@@ -2,6 +2,8 @@ package furhatos.app.affectivereaction.flow
 
 import furhatos.app.affectivereaction.flow.main.Idle
 import furhatos.flow.kotlin.*
+import furhatos.gestures.Gesture
+import furhatos.gestures.Gestures
 
 val Parent: State = state {
 
@@ -14,6 +16,7 @@ val Parent: State = state {
 
     onUserEnter(instant = true) {
         furhat.glance(it)
+        furhat.gesture(Gestures.Smile)
     }
 
 }

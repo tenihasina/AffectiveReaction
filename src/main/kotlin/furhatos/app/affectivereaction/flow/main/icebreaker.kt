@@ -89,7 +89,7 @@ val Introduction : State = state {
     onButton(turnButton.copy(label = "NAME ?")){
 
         with(furhat){
-            Gestures.Thoughtful
+            gesture(Gestures.Thoughtful)
             if (listParticipants.isEmpty()){
                 ask("Pouvez vous me donner votre prénom ?")
             } else {
@@ -103,7 +103,7 @@ val Introduction : State = state {
         if (name != null) {
             listParticipants.add(name)
             with(furhat){
-                Gestures.BigSmile(duration = 3000.0)
+                gesture(Gestures.BigSmile(duration = 3000.0))
                 say("Enchanté $name")
                 mapParticipants.put(listPositions[listParticipants.size-1], name)
             }
@@ -114,7 +114,7 @@ val Introduction : State = state {
     onButton(speakButton.copy(label = "MEMORIZE ALL NAMES")){
         with(furhat){
             if (listParticipants.isNotEmpty()){
-                Gestures.Roll
+                gesture(Gestures.CloseEyes)
                 say("Pour l'instant, j'ai retenu ${listParticipants.size} noms ")
                 mapParticipants.forEach{
                     furhat.attend(it.key)
@@ -129,7 +129,7 @@ val Introduction : State = state {
         onButton(speakButton.copy(label = "RESET NAMES")){
         listParticipants = mutableListOf()
         with(furhat){
-            Gestures.CloseEyes(duration = 3000.0)
+            gesture(Gestures.CloseEyes(duration = 3000.0))
             say("Je vais effacer les noms de ma mémoire")
         }
     }

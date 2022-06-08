@@ -1,9 +1,10 @@
 package furhatos.app.affectivereaction.flow.main
 
 import furhatos.app.affectivereaction.flow.navigationButton
-import furhatos.app.affectivereaction.setting.location_CENTER
+import furhatos.app.affectivereaction.setting.location_FRONT
 import furhatos.app.affectivereaction.setting.location_LEFT
 import furhatos.app.affectivereaction.setting.location_RIGHT
+import furhatos.app.affectivereaction.setting.mapParticipants
 import furhatos.app.affectivereaction.util.groupSummary
 import furhatos.flow.kotlin.*
 
@@ -17,9 +18,9 @@ val Summary : State = state {
     onButton(turnButton.copy(label = "LEFT-RIGHT")) {
         with(furhat) {
             glance(location_LEFT, 1000)
-            say("Vous à gauche")
+            say("${mapParticipants[location_LEFT]}")
             glance(location_RIGHT, 1000)
-            say("Et vous à droite")
+            say("${mapParticipants[location_RIGHT]}")
         }
         goto(StatementMajority)
     }
@@ -27,19 +28,19 @@ val Summary : State = state {
     onButton(turnButton.copy(label = "LEFT-FRONT")) {
         with(furhat) {
             glance(location_LEFT, 1000)
-            say("Vous à gauche")
-            glance(location_RIGHT, 1000)
-            say("Et vous au milieu")
+            say("${mapParticipants[location_LEFT]}")
+            glance(location_FRONT, 1000)
+            say("${mapParticipants[location_FRONT]}")
         }
         goto(StatementMajority)
     }
 
     onButton(turnButton.copy(label = "RIGHT-FRONT")) {
         with(furhat) {
-            glance(location_LEFT, 1000)
-            say("Vous à droite")
             glance(location_RIGHT, 1000)
-            say("Et vous au milieu")
+            say("${mapParticipants[location_RIGHT]}")
+            glance(location_RIGHT, 1000)
+            say("${mapParticipants[location_FRONT]}")
         }
         goto(StatementMajority)
     }
@@ -47,7 +48,7 @@ val Summary : State = state {
     onButton(turnButton.copy(label = "LEFT")){
         with(furhat) {
             glance(location_LEFT, duration = 1000)
-            say(transitionStatement.random().toString()+" vous à gauche")
+            say(transitionStatement.random().toString()+" ${mapParticipants[location_LEFT]}")
         }
         goto(StatementMinority)
     }
@@ -55,15 +56,15 @@ val Summary : State = state {
     onButton(turnButton.copy(label = "RIGHT")){
         with(furhat) {
             glance(location_RIGHT, duration = 1000)
-            say(transitionStatement.random().toString()+" vous à droite")
+            say(transitionStatement.random().toString()+" ${mapParticipants[location_RIGHT]}")
         }
         goto(StatementMinority)
     }
 
     onButton(turnButton.copy(label = "FRONT")){
         with(furhat) {
-            glance(location_CENTER, duration = 1000)
-            say(transitionStatement.random().toString()+" vous au milieu")
+            glance(location_FRONT, duration = 1000)
+            say(transitionStatement.random().toString()+" ${mapParticipants[location_FRONT]}")
         }
         goto(StatementMinority)
     }
@@ -132,7 +133,7 @@ val StatementMinority: State = state {
         goto(Summary)
     }
 
-    onButton(speakButton.copy(label = "P")) {
+    onButton(speakButton.copy(label = "N")) {
         with(furhat){
             if (groupSummary != null) {
                 say(

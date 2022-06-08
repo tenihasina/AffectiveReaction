@@ -4,7 +4,7 @@ import furhatos.app.affectivereaction.flow.Menu
 import furhatos.app.affectivereaction.flow.Parent
 import furhatos.app.affectivereaction.flow.backToMenuButton
 import furhatos.app.affectivereaction.flow.navigationButton
-import furhatos.app.affectivereaction.setting.location_CENTER
+import furhatos.app.affectivereaction.setting.location_FRONT
 import furhatos.app.affectivereaction.setting.location_LEFT
 import furhatos.app.affectivereaction.setting.location_RIGHT
 import furhatos.app.affectivereaction.util.dialogueCues
@@ -37,7 +37,7 @@ val Discussion : State = state(Parent) {
 
     onButton(turnButton.copy(label = "FRONT")) {
         with(furhat) {
-            attend(location_CENTER)
+            attend(location_FRONT)
             ask(Question(turn_distribution).nextQuestion())
         }
     }

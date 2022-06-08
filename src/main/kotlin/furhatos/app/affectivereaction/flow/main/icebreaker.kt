@@ -39,7 +39,7 @@ val IceBreaker : State = state(Parent) {
 
     onButton(turnButton.copy(label = "FRONT")) {
         with(furhat) {
-            attend(location_CENTER)
+            attend(location_FRONT)
             ask(Question(turn_distribution).nextQuestion())
         }
     }
@@ -105,7 +105,7 @@ val Introduction : State = state {
             with(furhat){
                 gesture(Gestures.BigSmile(duration = 3000.0))
                 say("Enchanté $name")
-                mapParticipants.put(listPositions[listParticipants.size-1], name)
+                saveParticipant(name)
             }
         }
 
@@ -114,8 +114,8 @@ val Introduction : State = state {
     onButton(speakButton.copy(label = "MEMORIZE ALL NAMES")){
         with(furhat){
             if (listParticipants.isNotEmpty()){
-                gesture(Gestures.CloseEyes)
-                say("Pour l'instant, j'ai retenu ${listParticipants.size} noms ")
+//                gesture(Gestures.CloseEyes)
+                say("Pour l'instant, j'ai retenu ${listParticipants.size%4} noms ")
                 mapParticipants.forEach{
                     furhat.attend(it.key)
                     furhat.say(it.value)
@@ -129,7 +129,7 @@ val Introduction : State = state {
         onButton(speakButton.copy(label = "RESET NAMES")){
         listParticipants = mutableListOf()
         with(furhat){
-            gesture(Gestures.CloseEyes(duration = 3000.0))
+//            gesture(Gestures.CloseEyes)
             say("Je vais effacer les noms de ma mémoire")
         }
     }
@@ -138,4 +138,8 @@ val Introduction : State = state {
         goto(IceBreaker)
     }
 
+}
+
+private fun saveParticipant(name : String){
+    mapParticipants[listPositions[(listParticipants.size-1)%3]] = name
 }

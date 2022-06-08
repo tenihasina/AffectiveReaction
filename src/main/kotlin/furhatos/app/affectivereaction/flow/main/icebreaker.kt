@@ -4,6 +4,7 @@ import furhatos.app.affectivereaction.flow.Menu
 import furhatos.app.affectivereaction.flow.Parent
 import furhatos.app.affectivereaction.flow.backToMenuButton
 import furhatos.app.affectivereaction.flow.navigationButton
+import furhatos.app.affectivereaction.setting.listPositions
 import furhatos.app.affectivereaction.setting.location_CENTER
 import furhatos.app.affectivereaction.setting.location_LEFT
 import furhatos.app.affectivereaction.setting.location_RIGHT
@@ -14,6 +15,12 @@ import furhatos.util.random
 val turnButton = Button(label = "turn management", section = Section.RIGHT, color = Color.Green)
 val speakButton = Button(label = "speech", section = Section.RIGHT, color = Color.Red)
 val question = iceBreaker?.let { Question(it.Ukraine ) }
+
+fun glanceAll(furhat:Furhat){
+    listPositions.forEach { 
+        furhat.glance(it, 1000)
+    }
+}
 
 val IceBreaker : State = state(Parent) {
 
@@ -43,7 +50,7 @@ val IceBreaker : State = state(Parent) {
 
         with(furhat) {
 
-            attendAll()
+            glanceAll(furhat)
             say("Je vais maintenant vous poser des questions concernant votre niveau de connaissance sur le sujet")
 //            listPositions.forEach { furhat.attend(it) }
         }
@@ -57,7 +64,7 @@ val IceBreaker : State = state(Parent) {
 //                    furhat.attend(it, eyesOnly = false)
 //                say("")
 //                }
-                attendAll()
+                glanceAll(furhat)
                 say(question.nextQuestion())
             }
         }
@@ -67,7 +74,7 @@ val IceBreaker : State = state(Parent) {
 
     onButton(navigationButton.copy(label = "END ICE BREAKER")) {
         with(furhat) {
-            attendAll()
+            glanceAll(furhat)
             say("Maintenant que nous disposons de plus de contexte sur le sujet, passons à des questions plus tranchées.")
 //            listPositions.forEach { furhat.attend(it) }
         }

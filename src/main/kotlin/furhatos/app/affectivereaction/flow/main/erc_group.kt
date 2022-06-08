@@ -73,7 +73,7 @@ val Summary : State = state {
 val StatementMajority : State = state {
     onButton(speakButton.copy(label = "PP")){
         with(furhat){
-            attendAll()
+            glanceAll(furhat)
             if (groupSummary != null) {
                 say(
                     Question(groupSummary.PP).nextQuestion()
@@ -85,7 +85,7 @@ val StatementMajority : State = state {
 
     onButton(speakButton.copy(label = "OO")){
         with(furhat){
-            attendAll()
+            glanceAll(furhat)
             if (groupSummary != null) {
                 say(
                     Question(groupSummary.OO).nextQuestion()
@@ -97,7 +97,7 @@ val StatementMajority : State = state {
 
     onButton(speakButton.copy(label = "NN")){
         with(furhat){
-            attendAll()
+            glanceAll(furhat)
             if (groupSummary != null) {
                 say(
                     Question(groupSummary.NN).nextQuestion()

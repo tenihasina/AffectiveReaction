@@ -1,5 +1,6 @@
 package furhatos.app.affectivereaction.flow.main
 
+import furhatos.app.affectivereaction.flow.ResetHead
 import furhatos.app.affectivereaction.flow.navigationButton
 import furhatos.app.affectivereaction.setting.location_FRONT
 import furhatos.app.affectivereaction.setting.location_LEFT
@@ -10,7 +11,7 @@ import furhatos.flow.kotlin.*
 
 val transitionStatement = listOf<String>("Et", "Quant à", "Ensuite")
 
-val Summary : State = state {
+val Summary : State = state(ResetHead) {
     onButton(navigationButton.copy(label = "REACTIONS")){
         goto(Discussion)
     }
@@ -71,7 +72,7 @@ val Summary : State = state {
 
 }
 
-val StatementMajority : State = state {
+val StatementMajority : State = state(ResetHead) {
     onButton(speakButton.copy(label = "PP")){
         with(furhat){
             glanceAll(furhat)

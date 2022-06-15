@@ -1,7 +1,54 @@
 {
 	"Ukraine": [
-		"Que savez-vous sur les causes du conflit ?",
 		"Savez-vous si des actions sont mises en place en Europe pour résoudre cette crise ?",
 		"Quelle est votre niveau de connaissance sur le statut de réfugié en général?"
+	],
+
+	"Covid": [
+		"À votre avis, y a-t-il un groupe de personnes plus vulnérables que d'autres ?",
+		"Si une personne est atteinte du nouveau coronavirus, quel genre de traitement doivent-elles suivre ?",
+		"À votre avis, quelles sont les activités communautaires les plus efficaces pour la prévention du coronavirus ?",
+		"Est-ce que vous essayez de rester à jour sur les précautions sanitaires ? "
+	],
+
+	"Elections": [
+		"Avez vous suivi les élections présidentielles de 2022 ?",
+		"Est-ce que vous suivez les élections législatives ?",
+		"Connaissez-vous tous les candidats aux présidentielles ?",
+		"Avez-vous voté durant ces élections ?"
+	],
+
+	"INTRO_Ukraine": [
+		"Le 24 février 2022, la Russie a lancé une action militaire en Ukraine, avec des forces entrant dans le pays depuis le Belarus au nord, la Russie à l'est et la Crimée au sud.\n\n",
+		"Le président Poutine a déclaré que la Russie, agissant en légitime défense, lançait une opération militaire spéciale dans le Donbas et a appelé les forces ukrainiennes à déposer les armes.",
+		"\n Les forces russes ont toutefois mené un assaut de grande envergure dans le pays. Après avoir échoué à prendre Kiev, les forces russes se concentrent actuellement sur le sud et l'est de l'Ukraine.",
+		"Un ensemble de sanctions \"sans précédent\" a été imposé à la Russie par les États-Unis, l'Union européenne, le Royaume-Uni et d'autres alliés et partenaires dans le monde."
+	],
+
+	"INTRO_Covid": [
+		"La maladie à coronavirus 2019 Écouter, aussi appelée la ou lea Covid-19 Écouter est une maladie infectieuse émergente de type zoonose virale causée par la souche de coronavirus SARS-CoV-2.",
+		"Les symptômes les plus fréquents sont la fièvre, la toux, la fatigue et la gêne respiratoire. ",
+		" Dans les formes les plus graves, l'apparition d'un syndrome de détresse respiratoire aiguë peut entraîner la mort.",
+		" Au début des années 2020, la maladie à coronavirus 2019 est une pandémie, qui bouleverse l'activité humaine sur la totalité de la planète, à travers des confinements généraux, de strictes mesures sanitaires, la fermeture des frontières, et le ralentissement ou l'annulation dans de nombreux secteurs économiques ou événementiels.",
+		" Plusieurs types de vaccins anti-covid sont fabriqués, notamment à ARN messager qui à partir de 2021, sont administrés à une grande partie de la population, plus largement dans les pays riches, en Europe, Amérique du Nord et du Sud, Asie et Océanie, pour tenter de freiner la pandémie."
+	],
+
+	"INTRO_Elections": [
+		"L'élection présidentielle française de 2022 a lieu les 10 et 24 avril 2022 afin d'élire le président de la République française pour un mandat de cinq ans.\n\nIl s'agit de la douzième élection présidentielle de la Ve République et onzième au suffrage universel direct.",
+		" Aucun des douze candidats en lice n'ayant remporté la majorité absolue des suffrages exprimés au premier tour, un second tour est organisé entre les deux premiers candidats.",
+		"Au second tour, c'est donc Emmanuel Macron qui a été élu, avec 58.55% des suffrages exprimés."
+	],
+
+	"INTRO_GENERAL": [
+		"Bonjour à tous, je vous remercie d'être venus. Mon nom est Antonia, et je vous accompagnerai dans nos échanges aujourd'hui.",
+		" L'objectif de cette session est d'échanger sur un certains nombre de questions, sur un thème spécifique. Nous allons procéder de la manière suivante : je vais tout d'abord introduire le sujet, puis poser quelques questions sur votre niveau de connaissance dessus. Ensuite nous aurons une discussion plus approfondie.",
+		" Mon rôle sera de vous guider dans la discussion, et de vous présenter les consignes à respecter pour nos échanges."
+	],
+
+	"CONSIGNE": [
+		"Durant la discussion, nous allons essayer de respecter quelques consignes.  ",
+		"Nous allons essayer d'équilibrer le temps de parole pour tout le monde, et essayer de ne pas prendre plus de 5 minutes sur chaque sujets.",
+		"Il est possible que certains sujets soient plus difficiles à traiter que d'autres, mais je vous encourage à garder une attitude positive par rapport à notre conversation et à respecter l'opinion de vos collègues.",
+		"Je vais essayer d'intervenir après chaque discussion sur un sujet, pour vous donner mon ressenti par rapport à la manière dont vous avez discuté."
 	]
 }

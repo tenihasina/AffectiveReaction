@@ -23,35 +23,16 @@ fun glanceAll(furhat:Furhat){
 
 val IceBreaker : State = state(Parent) {
 
-    onButton(turnButton.copy(label = "LEFT")) {
-
-        with(furhat) {
-            attend(location_LEFT)
-            Thread.sleep(1000)
-            say(turn_question.nextQuestion())
-        }
-    }
-
-    onButton(turnButton.copy(label = "RIGHT")) {
-        with(furhat) {
-            attend(location_RIGHT)
-            Thread.sleep(1000)
-            say(turn_question.nextQuestion())
-        }
-    }
-
-    onButton(turnButton.copy(label = "FRONT")) {
-        with(furhat) {
-            attend(location_FRONT)
-            Thread.sleep(1000)
-            say(turn_question.nextQuestion())
-        }
-    }
-
     onButton(speakButton.copy(label = "CONTEXT")) {
 
         with(furhat) {
-
+            attend(location_FRONT)
+            iceBreaker?.INTRO_Ukraine?.forEach {
+                furhat.say(it)
+                Thread.sleep(1000)
+                glanceAll(furhat)
+            }
+            Thread.sleep(1000)
             glanceAll(furhat)
             say("Je vais maintenant vous poser des questions concernant votre niveau de connaissance sur le sujet")
 //            listPositions.forEach { furhat.attend(it) }
@@ -89,6 +70,35 @@ val IceBreaker : State = state(Parent) {
 }
 
 val Introduction : State = state {
+
+    onButton(speakButton.copy(label = "introduction")){
+
+        if (iceBreaker != null) {
+            with(furhat){
+                gesture(Gestures.BigSmile(duration = 4000.0))
+                glanceAll(furhat)
+                iceBreaker.INTRO_GENERAL.forEach {
+                    furhat.say(it)
+                    Thread.sleep(1000)
+                    glanceAll(furhat)
+                }
+                Thread.sleep(2000)
+                gesture(Gestures.Thoughtful(duration = 4000.0))
+                iceBreaker.CONSIGNE.forEach {
+                    furhat.say(it)
+                    Thread.sleep(1000)
+                    glanceAll(furhat)
+                }
+            }
+        }
+    }
+
+    onButton(speakButton.copy(label = "ALREADY KNOW YOU")){
+        with(furhat){
+            glanceAll(furhat)
+            say("On m'a donné à l'avance les noms des participants au session, si jamais il y a une erreur, n'hésitez pas à m'en faire part")
+        }
+    }
 
     onButton(turnButton.copy(label = "NAME ?")){
 

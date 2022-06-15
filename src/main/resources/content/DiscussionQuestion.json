@@ -1,0 +1,30 @@
+{
+  "Ukraine": [
+    "Quel est votre opinion sur la manière dont la crise a été couverte par les médias ?",
+    "De nombreux pays (Liban, Jordanie, Turquie, etc) ont refusé d’accueillir les réfugiés ukrainiens, qu’en pensez-vous ?",
+    "Par rapport aux autres crises humanitaires, comme le Yémen ou la Somalie, est-ce que cette crise vous a marquée ?",
+    "Quand vous entendez parler de la situation des réfugiés qui arrivent en France, quel est votre ressenti ?",
+    "Quelle est votre opinion sur les conséquences que ces sanctions ont eu en France ?",
+    "Beaucoup d'athlètes internationaux pensent que les sanctions imposés aux sportifs russes devraient être levées. Quel est votre opinion là dessus?",
+    "Si vous étiez un citoyen russe, quel serait votre ressenti par rapport à la situation actuelle ?"
+  ],
+
+  "Covid": [
+    "Est-ce que vous pensez que la situation commence à s’améliorer au sein de votre communauté ?",
+    "Comment la pandémie a affecté votre vie sociale durant la période de confinement ?",
+    "Y’a t-il eu des événements liés à la pandémie qui vous ont particulièrement marqué ?",
+    "Quelle est votre opinion sur le fait de travailler à distance de manière périodique (2-3 fois par semaine) ?",
+    "Y’a t-il des choses que vous souhaitez changer au sein de votre vie suite à cette pandémie ?",
+    "Pensez-vous que la levée des restrictions soit une décision raisonnable ?"
+  ],
+
+  "Elections": [
+    "Y’a t-il des sujets qui semblent avoir été couverts plus que d’autres par les médias durant les élections ? Pouvez-vous les présenter ?",
+    "Quelle est votre opinion sur la façon dont les deux élections ont été couvertes par les médias ?",
+    "Selon vous, à quel point cette élection était-elle importante ?",
+    "Quel est votre ressenti par rapport au fort taux d’abstention sur ces élections ?",
+    "Comment avez-vous réagi, à l’annonce des résultats du premier tour ?",
+    "Quel est votre ressenti sur le résultat final de cette élection ?",
+    "Pourriez vous décrire les points clés sur lesquels votre président idéal devrait travailler ?"
+  ]
+}

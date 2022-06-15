@@ -7,39 +7,39 @@ import furhatos.app.affectivereaction.flow.navigationButton
 import furhatos.app.affectivereaction.setting.location_FRONT
 import furhatos.app.affectivereaction.setting.location_LEFT
 import furhatos.app.affectivereaction.setting.location_RIGHT
+import furhatos.app.affectivereaction.setting.mapParticipants
 import furhatos.app.affectivereaction.util.dialogueCues
+import furhatos.app.affectivereaction.util.discussionQ
 import furhatos.flow.kotlin.*
 import furhatos.gestures.Gestures
 import furhatos.util.random
 
 
 val reactionButton = Button(label = "reaction button", section = Section.RIGHT, color = Color.Red)
+val randomQ = discussionQ?.let { Question(it.Ukraine) }
+
 val Discussion : State = state(Parent) {
 
-
-    onButton(turnButton.copy(label = "LEFT")) {
-
-        with(furhat) {
-            attend(location_LEFT)
-            Thread.sleep(1000)
-            say(turn_question.nextQuestion())
-        }
+    onButton(navigationButton.copy(label = "CONCLUSION")){
+        goto(Conclusion)
     }
 
-    onButton(turnButton.copy(label = "RIGHT")) {
-        with(furhat) {
-            attend(location_RIGHT)
-            Thread.sleep(1000)
-            say(turn_question.nextQuestion())
-        }
-    }
 
-    onButton(turnButton.copy(label = "FRONT")) {
-        with(furhat) {
+    onButton(speakButton.copy(label = "QUESTION", color = Color.Yellow)){
+        with(furhat){
             attend(location_FRONT)
-            Thread.sleep(1000)
-            say(turn_question.nextQuestion())
+            if (randomQ != null) {
+                say(randomQ.nextQuestion())
+            }
         }
+    }
+
+    onButton(speakButton.copy(label = "CUT", color = Color.Yellow)){
+        with(furhat){
+            gesture(Gestures.Thoughtful)
+            say("Je vais devoir couper la discussion sur ce sujet. Nous avons passé pas mal de temps sur cette question. ")
+        }
+
     }
 
     onButton(navigationButton.copy(label = "ICE BREAKER")) {

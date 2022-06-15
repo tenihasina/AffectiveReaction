@@ -37,4 +37,8 @@ val Menu : State = state() {
     onButton(navigationButton.copy(label = "INTRO")){
         goto(Introduction)
     }
+
+    onButton(navigationButton.copy(label = "CONCLUSION")){
+        goto(Conclusion)
+    }
 }

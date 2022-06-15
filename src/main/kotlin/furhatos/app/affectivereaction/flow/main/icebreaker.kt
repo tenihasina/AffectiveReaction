@@ -12,9 +12,7 @@ import furhatos.nlu.common.TellName
 
 val turnButton = Button(label = "turn management", section = Section.RIGHT, color = Color.Green)
 val speakButton = Button(label = "speech", section = Section.RIGHT, color = Color.Red)
-val question = iceBreaker?.let { Question(it.Ukraine ) }
-val turn_distribution = listOf("Qu'en pensez vous ?", "Est-ce que cela vous parle ?", "Et vous ?")
-val turn_question = Question(turn_distribution)
+
 fun glanceAll(furhat:Furhat){
     listPositions.forEach { 
         furhat.glance(it, 1000)
@@ -27,10 +25,12 @@ val IceBreaker : State = state(Parent) {
 
         with(furhat) {
             attend(location_FRONT)
-            iceBreaker?.INTRO_Ukraine?.forEach {
-                furhat.say(it)
-                Thread.sleep(1000)
-                glanceAll(furhat)
+            if (intro != null) {
+                intro.forEach {
+                    furhat.say(it)
+                    Thread.sleep(1000)
+                    glanceAll(furhat)
+                }
             }
             Thread.sleep(1000)
             glanceAll(furhat)

@@ -4,10 +4,7 @@ import furhatos.app.affectivereaction.flow.Menu
 import furhatos.app.affectivereaction.flow.Parent
 import furhatos.app.affectivereaction.flow.backToMenuButton
 import furhatos.app.affectivereaction.flow.navigationButton
-import furhatos.app.affectivereaction.setting.location_FRONT
-import furhatos.app.affectivereaction.setting.location_LEFT
-import furhatos.app.affectivereaction.setting.location_RIGHT
-import furhatos.app.affectivereaction.setting.mapParticipants
+import furhatos.app.affectivereaction.setting.*
 import furhatos.app.affectivereaction.util.dialogueCues
 import furhatos.app.affectivereaction.util.discussionQ
 import furhatos.flow.kotlin.*
@@ -16,7 +13,7 @@ import furhatos.util.random
 
 
 val reactionButton = Button(label = "reaction button", section = Section.RIGHT, color = Color.Red)
-val randomQ = discussionQ?.let { Question(it.Ukraine) }
+
 
 val Discussion : State = state(Parent) {
 

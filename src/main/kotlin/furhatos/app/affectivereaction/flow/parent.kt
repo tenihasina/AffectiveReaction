@@ -2,13 +2,8 @@ package furhatos.app.affectivereaction.flow
 
 import furhatos.app.affectivereaction.flow.main.Idle
 import furhatos.app.affectivereaction.flow.main.turnButton
-import furhatos.app.affectivereaction.flow.main.turn_question
-import furhatos.app.affectivereaction.setting.location_FRONT
-import furhatos.app.affectivereaction.setting.location_LEFT
-import furhatos.app.affectivereaction.setting.location_RIGHT
-import furhatos.app.affectivereaction.setting.mapParticipants
+import furhatos.app.affectivereaction.setting.*
 import furhatos.flow.kotlin.*
-import furhatos.gestures.Gesture
 import furhatos.gestures.Gestures
 
 val Parent: State = state {

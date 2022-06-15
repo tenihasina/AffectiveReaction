@@ -65,9 +65,7 @@
 									"oh non, je suis vraiment désolée d'entendre ça. Cela a dû être très difficile pour vous."
 									],
         
-         "encouragingEmpatheticPhrases" :["Tu es courageux/courageuse.",
-											"tu es fort(e).",
-											"tu es un battant/une battante.",
+         "encouragingEmpatheticPhrases" :["C'est courageux ce que tu dis",
 											" J'espère que les choses vont mieux désormais.",
 											"J'espère que tout se passe mieux désormais.",
 											"D'une manière ou d'une autre, à travers tout ça tu continues à avancer.",
@@ -89,8 +87,7 @@
 			"Je n'arrive pas à y croire !",
 			"Je trouve ça terrible",
 			"J'en ai assez d'entendre ça ",
-			"C'est de la poudre de perlimpimpin !",
-			"Sébastien, arrête!"
+			"C'est absurde !"
 		],
 		"showDisgustEmpatheticPhrases" : [
 			"C'est ignoble !",

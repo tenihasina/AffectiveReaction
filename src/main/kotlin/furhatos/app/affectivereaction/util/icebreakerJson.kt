@@ -10,6 +10,8 @@ data class IceBreaker (
     val Ukraine: List<String>,
     val Covid: List<String>,
     val Elections: List<String>,
+    val SocialNetwork:List<String>,
+    val INTRO_SocialNetwork:List<String>,
     val INTRO_Ukraine: List<String>,
     val INTRO_Covid: List<String>,
     val INTRO_Elections:List<String>,

@@ -21,13 +21,27 @@ val Discussion : State = state(Parent) {
         goto(Conclusion)
     }
 
+    onButton(navigationButton.copy(label = "CONFLICT")){
+        goto(ActiveListening)
+    }
+
 
     onButton(speakButton.copy(label = "QUESTION", color = Color.Yellow)){
         with(furhat){
-            attend(location_FRONT)
+//            attend(location_FRONT)
+//            attendAll()
             if (randomQ != null) {
                 say(randomQ.nextQuestion())
             }
+        }
+    }
+
+    onButton(speakButton.copy(label = " MORE?")){
+        with(furhat){
+//            glanceAll(furhat)
+//            attendAll()
+            gesture(Gestures.Thoughtful(strength = 20.0, duration = 5000.0))
+            say("Avez-vous encore quelque chose à rajouter ?")
         }
     }
 
@@ -53,7 +67,7 @@ val Discussion : State = state(Parent) {
 
     onButton(reactionButton.copy(label = "HAPPY")) {
         furhat.say {
-            +Gestures.BigSmile(duration = 2.0)
+            +Gestures.BigSmile(strength = 20.0)
             if (dialogueCues != null) {
                 +dialogueCues.happyEmpatheticPhrases.random().toString()
             }
@@ -62,7 +76,7 @@ val Discussion : State = state(Parent) {
 
     onButton(reactionButton.copy(label = "SAD")) {
         furhat.say {
-            +Gestures.ExpressSad(duration = 2.0)
+            +Gestures.ExpressSad(strength = 20.0)
             if (dialogueCues != null) {
                 +dialogueCues.sadEmpatheticPhrases.random().toString()
             }
@@ -87,7 +101,7 @@ val Discussion : State = state(Parent) {
         }
     }
 
-    onButton(reactionButton.copy(label = "GRATITUDE")) {
+    onButton(reactionButton.copy(label = "NEUTRE")) {
         furhat.say {
             +Gestures.Nod
             if (dialogueCues != null) {
@@ -107,7 +121,7 @@ val Discussion : State = state(Parent) {
 
     onButton(reactionButton.copy(label = "ANGER")) {
         furhat.say {
-            +Gestures.ExpressAnger
+            +Gestures.Thoughtful(strength = 20.0, duration = 5000.0)
             if (dialogueCues != null) {
                 +dialogueCues.showAngerEmpatheticPhrases.random().toString()
             }

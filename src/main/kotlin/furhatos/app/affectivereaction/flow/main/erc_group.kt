@@ -16,55 +16,98 @@ val Summary : State = state(ResetHead) {
         goto(Discussion)
     }
 
-    onButton(turnButton.copy(label = "LEFT-RIGHT")) {
+    onButton(speakButton.copy(label = "PPP")){
+        with(furhat){
+            say {
+                if (groupSummary != null) {
+                    Question(groupSummary.PPP)
+                }
+            }
+        }
+    }
+
+    onButton(speakButton.copy(label = "OOO")){
+        with(furhat){
+            say {
+                if (groupSummary != null) {
+                    Question(groupSummary.OOO)
+                }
+            }
+        }
+    }
+
+    onButton(speakButton.copy(label = "NNN")){
+        with(furhat){
+            say {
+                if (groupSummary != null) {
+                    Question(groupSummary.NNN)
+                }
+            }
+        }
+    }
+
+    onButton(speakButton.copy(label = "PON")){
+        with(furhat){
+            say {
+                if (groupSummary != null) {
+                    Question(groupSummary.PON)
+                }
+            }
+        }
+    }
+
+    onButton(turnButton.copy(label = "${mapParticipants[location_LEFT].toString()}-${mapParticipants[location_RIGHT].toString()}")) {
         with(furhat) {
-            glance(location_LEFT, 1000)
+            attend(location_LEFT)
             say("${mapParticipants[location_LEFT]}")
-            glance(location_RIGHT, 1000)
+            Thread.sleep(1000)
+            attend(location_RIGHT)
             say("${mapParticipants[location_RIGHT]}")
         }
         goto(StatementMajority)
     }
 
-    onButton(turnButton.copy(label = "LEFT-FRONT")) {
+    onButton(turnButton.copy(label = "${mapParticipants[location_LEFT].toString()}-${mapParticipants[location_FRONT].toString()}")) {
         with(furhat) {
-            glance(location_LEFT, 1000)
+            attend(location_LEFT)
             say("${mapParticipants[location_LEFT]}")
-            glance(location_FRONT, 1000)
+            Thread.sleep(1000)
+            attend(location_FRONT)
             say("${mapParticipants[location_FRONT]}")
         }
         goto(StatementMajority)
     }
 
-    onButton(turnButton.copy(label = "RIGHT-FRONT")) {
+    onButton(turnButton.copy(label = "${mapParticipants[location_RIGHT].toString()}-${mapParticipants[location_FRONT].toString()}")) {
         with(furhat) {
-            glance(location_RIGHT, 1000)
+            attend(location_RIGHT)
             say("${mapParticipants[location_RIGHT]}")
-            glance(location_RIGHT, 1000)
+            Thread.sleep(1000)
+            attend(location_RIGHT)
             say("${mapParticipants[location_FRONT]}")
         }
         goto(StatementMajority)
     }
 
-    onButton(turnButton.copy(label = "LEFT")){
+    onButton(turnButton.copy(label = mapParticipants[location_LEFT].toString())){
         with(furhat) {
-            glance(location_LEFT, duration = 1000)
+            attend(location_LEFT)
             say(transitionStatement.random().toString()+" ${mapParticipants[location_LEFT]}")
         }
         goto(StatementMinority)
     }
 
-    onButton(turnButton.copy(label = "RIGHT")){
+    onButton(turnButton.copy(label = mapParticipants[location_RIGHT].toString())){
         with(furhat) {
-            glance(location_RIGHT, duration = 1000)
+            attend(location_RIGHT)
             say(transitionStatement.random().toString()+" ${mapParticipants[location_RIGHT]}")
         }
         goto(StatementMinority)
     }
 
-    onButton(turnButton.copy(label = "FRONT")){
+    onButton(turnButton.copy(label = mapParticipants[location_FRONT].toString())){
         with(furhat) {
-            glance(location_FRONT, duration = 1000)
+            attend(location_FRONT)
             say(transitionStatement.random().toString()+" ${mapParticipants[location_FRONT]}")
         }
         goto(StatementMinority)

@@ -9,7 +9,9 @@ const val file_discussion = "/content/DiscussionQuestion.json"
 data class DiscussionQuestion(
     val Ukraine:List<String>,
     val Covid:List<String>,
-    val Elections:List<String>
+    val Elections:List<String>,
+    val SocialNetwork:List<String>,
+    val INTRO_ACTIVE_LISTENING:List<String>
 ) {
     companion object {
         public fun fromJson(json: String) = klaxon.parse<DiscussionQuestion>(json)

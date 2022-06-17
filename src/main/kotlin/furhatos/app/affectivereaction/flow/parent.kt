@@ -1,11 +1,14 @@
 package furhatos.app.affectivereaction.flow
 
 import furhatos.app.affectivereaction.flow.main.Idle
+import furhatos.app.affectivereaction.flow.main.speakButton
 import furhatos.app.affectivereaction.flow.main.turnButton
 import furhatos.app.affectivereaction.setting.*
 import furhatos.flow.kotlin.*
 import furhatos.gestures.Gestures
 
+
+val thanks = listOf("Super", "Merci", "OK !")
 val Parent: State = state {
 
     onUserLeave(instant = true) {
@@ -24,7 +27,19 @@ val Parent: State = state {
         furhat.attend(location_FRONT)
     }
 
-    onButton(turnButton.copy(label = "LEFT")) {
+    onButton(turnButton.copy(label = "LEFT")){
+        furhat.attend(location_LEFT)
+    }
+
+    onButton(turnButton.copy(label = "RIGHT")){
+        furhat.attend(location_RIGHT)
+    }
+
+    onButton(turnButton.copy(label = "FRONT")){
+        furhat.attend(location_FRONT)
+    }
+
+    onButton(turnButton.copy(label = mapParticipants[location_LEFT].toString())) {
 
         with(furhat) {
             if ((0..2).random() == 0 ) {
@@ -44,7 +59,7 @@ val Parent: State = state {
         }
     }
 
-    onButton(turnButton.copy(label = "RIGHT")) {
+    onButton(turnButton.copy(label = mapParticipants[location_RIGHT].toString())) {
         with(furhat) {
             if ((0..2).random() == 0 ) {
                 attend(location_RIGHT)
@@ -63,7 +78,7 @@ val Parent: State = state {
         }
     }
 
-    onButton(turnButton.copy(label = "FRONT")) {
+    onButton(turnButton.copy(label = mapParticipants[location_FRONT].toString())) {
         with(furhat) {
             if ((0..2).random() == 0 ) {
                 attend(location_FRONT)
@@ -78,6 +93,28 @@ val Parent: State = state {
                     attend(location_FRONT)
                     Thread.sleep(1000)
                 }
+            }
+        }
+    }
+
+    onButton(speakButton.copy(label = "Avez-vous compris ?")){
+        with(furhat){
+//            glanceAll(furhat)
+//            attendAll()
+            say{
+                +Gestures.Thoughtful(strength = 20.0, duration = 5000.0)
+                +"Est-ce que les instructions sont claires ?"
+            }
+        }
+    }
+
+    onButton(speakButton.copy(label = "OK")){
+        with(furhat){
+//            glanceAll(furhat)
+//            attendAll()
+            say{
+                +Gestures.BigSmile(strength = 20.0, duration = 2000.0)
+                +thanks.random().toString()
             }
         }
     }

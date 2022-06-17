@@ -26,5 +26,24 @@
     "Comment avez-vous réagi, à l’annonce des résultats du premier tour ?",
     "Quel est votre ressenti sur le résultat final de cette élection ?",
     "Pourriez vous décrire les points clés sur lesquels votre président idéal devrait travailler ?"
+  ],
+
+  "SocialNetwork": [
+    "Pensez-vous que les réseaux sociaux aident les gens à sociabiliser ?",
+    "Est-ce que vous vous considérez « accro » aux réseaux sociaux ?",
+    "Selon vous, quelles sont les fonctionnalités les plus importantes pour un réseau social ?",
+    "Quel est votre fonctionnalité préféré sur les réseaux sociaux ? ",
+    "Avez-vous vécu des événements marquants via les réseaux sociaux ?",
+    "Quelle est votre opinion sur le fait d’utiliser les réseaux sociaux comme plateforme démocratique ? ",
+    "Quel est votre ressenti sur le problème de harcèlement en ligne ?",
+    "Devrait-on limiter l'usage des réseaux sociaux au travail ?"
+  ],
+
+  "INTRO_ACTIVE_LISTENING": [
+    "L'écoute fait partie intégrante d'une communication efficace",
+    " La plupart des gens\nentendent leurs partenaires plutôt que de les écouter. ",
+    "Il s'agit pourtant de deux activités distinctes",
+    "Entendre est une activité passive elors que l'écoute est un acte conscient et délibéré.",
+    "Je vais donc vous demander de pratiquer cette compétence tout au long de cette session"
   ]
 }

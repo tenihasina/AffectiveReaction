@@ -18,6 +18,19 @@
 		"Avez-vous voté durant ces élections ?"
 	],
 
+	"SocialNetwork": [
+		"Utilisez-vous les réseaux sociaux ? A quel fréquence ?",
+		"Via quel medium utilisez-vous les réseaux sociaux (tablette, portable, laptop, etc)",
+		"Pourquoi utilisez-vous les réseaux sociaux ?"
+	],
+
+	"INTRO_SocialNetwork": [
+		"L'explosion d'Internet a été le point de départ pour de nombreuses révolutions technologiques et culturelles de l'histoire.",
+		"L'émergence des résaux sociaux en est un exemple marquant.",
+		"Au cours des dix dernières années, les réseaux sociaux ont connu une croissance extrêmement rapide et sont devenus centraux dans la vie de centaines de millions de personnes.",
+		"Notamment, Les plateformes sociales telles que Facebook, Twitter, WhatsApp, Instagram ou Tiktok nous permettent de communiquer avec nos proches."
+	],
+
 	"INTRO_Ukraine": [
 		"Le 24 février 2022, la Russie a lancé une action militaire en Ukraine, avec des forces entrant dans le pays depuis le Belarus au nord, la Russie à l'est et la Crimée au sud.\n\n",
 		"Le président Poutine a déclaré que la Russie, agissant en légitime défense, lançait une opération militaire spéciale dans le Donbas et a appelé les forces ukrainiennes à déposer les armes.",
@@ -40,15 +53,21 @@
 	],
 
 	"INTRO_GENERAL": [
-		"Bonjour à tous, je vous remercie d'être venus. Mon nom est Antonia, et je vous accompagnerai dans nos échanges aujourd'hui.",
-		" L'objectif de cette session est d'échanger sur un certains nombre de questions, sur un thème spécifique. Nous allons procéder de la manière suivante : je vais tout d'abord introduire le sujet, puis poser quelques questions sur votre niveau de connaissance dessus. Ensuite nous aurons une discussion plus approfondie.",
+		"Bonjour à tous, je vous remercie d'être venus.",
+		"Mon nom est Antonia, et je vous accompagnerai dans nos échanges aujourd'hui.",
+		" L'objectif de cette session est d'échanger sur un certains nombre de questions, sur un thème spécifique. ",
+		"Nous allons procéder de la manière suivante : ",
+		"je vais tout d'abord introduire le sujet, puis poser quelques questions sur votre niveau de connaissance dessus.",
+		" Ensuite nous aurons une discussion plus approfondie.",
 		" Mon rôle sera de vous guider dans la discussion, et de vous présenter les consignes à respecter pour nos échanges."
 	],
 
 	"CONSIGNE": [
 		"Durant la discussion, nous allons essayer de respecter quelques consignes.  ",
+		"Je vais poser un certains nombre de questions sur le sujet.",
+		"Je vais vous demander d'y répondre un à un, pour avoir votre opinion dessus",
 		"Nous allons essayer d'équilibrer le temps de parole pour tout le monde, et essayer de ne pas prendre plus de 5 minutes sur chaque sujets.",
-		"Il est possible que certains sujets soient plus difficiles à traiter que d'autres, mais je vous encourage à garder une attitude positive par rapport à notre conversation et à respecter l'opinion de vos collègues.",
+		"Il est possible que certains sujets soient plus difficiles à traiter que d'autres, mais je vous encourage à respecter l'opinion de vos collègues.",
 		"Je vais essayer d'intervenir après chaque discussion sur un sujet, pour vous donner mon ressenti par rapport à la manière dont vous avez discuté."
 	]
 }

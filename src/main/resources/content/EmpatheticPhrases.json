@@ -35,14 +35,12 @@
 									"umm C'est une bonne chose.",
 									"ah ça a l'air génial !.",
 									"Génial !",
-									"ah c'est toujours agréable d'accomplir quelque chose comme ça. ",
 									"C'est génial !",
 									"ça a l’air vraiment sympa.",
 									"umm, sympa.",
 									"ah sympa.",
 									"ça a l’air vraiment bien !",
-									"C'est vraiment cool.",									
-									"On dirait que vous vous êtes super bien débrouillé."
+									"C'est vraiment cool."
 									],
 									
 		"sadEmpatheticPhrases"  : ["oh ! c'est pas génial.",
@@ -61,15 +59,11 @@
 									"Oh non, je suis désolé d'entendre ça.",
 									"ça a dû être dur pour vous.",
 									"Oui, c'est une chose difficile à gérer.",
-									"Ça doit être si difficile.",
-									"oh non, je suis vraiment désolée d'entendre ça. Cela a dû être très difficile pour vous."
+									"Ça doit être si difficile."
 									],
         
          "encouragingEmpatheticPhrases" :["C'est courageux ce que tu dis",
-											" J'espère que les choses vont mieux désormais.",
-											"J'espère que tout se passe mieux désormais.",
-											"D'une manière ou d'une autre, à travers tout ça tu continues à avancer.",
-											"Tu es courageux/courageuse. D'une manière ou d'une autre, à travers tout ça.",
+											" J'espère que les choses vont mieux désormais.",								"J'espère que tout se passe mieux désormais.",
 											"tu continues à avancer.",
 											"J'espère que ça va mieux désormais !",
 											"j'espère que tout se passe bien maintenant !",
@@ -84,16 +78,14 @@
 											"Pourriez-vous développer, s'il vous plaît, je veux être sûr de comprendre." 
 											],
 		"showAngerEmpatheticPhrases" : [
-			"Je n'arrive pas à y croire !",
-			"Je trouve ça terrible",
-			"J'en ai assez d'entendre ça ",
-			"C'est absurde !"
+			"Je comprends, ça doit être frustrant d'en parler",
+			"En effet, c'est terrible",
+			"Merci, cela a du être difficile d'en parler"
 		],
 		"showDisgustEmpatheticPhrases" : [
-			"C'est ignoble !",
-			"C'est horrible",
+			"C'est terrible !",
 			"Oh non !",
-			"Beurk !"
+			"Ca a l'air de vous avoir beaucoup affecté"
 		],
 
 		"showFearEmpatheticPhrases" : [

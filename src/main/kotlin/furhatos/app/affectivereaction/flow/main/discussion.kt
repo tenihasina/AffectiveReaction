@@ -14,6 +14,7 @@ import furhatos.util.random
 
 val reactionButton = Button(label = "reaction button", section = Section.RIGHT, color = Color.Red)
 
+var current_question = ""
 
 val Discussion : State = state(Parent) {
 
@@ -31,7 +32,18 @@ val Discussion : State = state(Parent) {
 //            attend(location_FRONT)
 //            attendAll()
             if (randomQ != null) {
-                say(randomQ.nextQuestion())
+                current_question = randomQ.nextQuestion()
+                say(current_question)
+            }
+        }
+    }
+
+    onButton(speakButton.copy(label = "REPEAT")){
+        with(furhat){
+            say{
+                +"la question était la suivante :"
+                +Gestures.Thoughtful
+                +current_question
             }
         }
     }
@@ -105,7 +117,7 @@ val Discussion : State = state(Parent) {
         furhat.say {
             +Gestures.Nod
             if (dialogueCues != null) {
-                +dialogueCues.gratitudeEmpatheticPhrases.random().toString()
+                +dialogueCues.showInterestEmpatheticPhrases.random().toString()
             }
         }
     }

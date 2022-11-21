@@ -15,42 +15,38 @@ val Summary : State = state(ResetHead) {
     onButton(navigationButton.copy(label = "REACTIONS")){
         goto(Discussion)
     }
-
     onButton(speakButton.copy(label = "PPP")){
         with(furhat){
             say {
                 if (groupSummary != null) {
-                    Question(groupSummary.PPP)
+                    +groupSummary?.let { Question(it.PPP) }?.nextQuestion()
                 }
             }
         }
     }
-
     onButton(speakButton.copy(label = "OOO")){
         with(furhat){
             say {
                 if (groupSummary != null) {
-                    Question(groupSummary.OOO)
+                    +groupSummary?.let { Question(it.OOO) }?.nextQuestion()
                 }
             }
         }
     }
-
     onButton(speakButton.copy(label = "NNN")){
         with(furhat){
             say {
                 if (groupSummary != null) {
-                    Question(groupSummary.NNN)
+                    +groupSummary?.let { Question(it.NNN) }?.nextQuestion()
                 }
             }
         }
     }
-
     onButton(speakButton.copy(label = "PON")){
         with(furhat){
             say {
                 if (groupSummary != null) {
-                    Question(groupSummary.PON)
+                    +groupSummary?.let { Question(it.PON) }?.nextQuestion()
                 }
             }
         }

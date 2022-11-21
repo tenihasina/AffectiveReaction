@@ -11,10 +11,14 @@ data class IceBreaker (
     val Covid: List<String>,
     val Elections: List<String>,
     val SocialNetwork:List<String>,
+    val Climat:List<String>,
+    val Sport:List<String>,
     val INTRO_SocialNetwork:List<String>,
     val INTRO_Ukraine: List<String>,
     val INTRO_Covid: List<String>,
     val INTRO_Elections:List<String>,
+    val INTRO_Climat:List<String>,
+    val INTRO_Sport:List<String>,
     val INTRO_GENERAL: List<String>,
     val CONSIGNE: List<String>
 ) {

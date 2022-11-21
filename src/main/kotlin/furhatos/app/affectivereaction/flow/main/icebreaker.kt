@@ -5,6 +5,7 @@ import furhatos.app.affectivereaction.flow.Parent
 import furhatos.app.affectivereaction.flow.backToMenuButton
 import furhatos.app.affectivereaction.flow.navigationButton
 import furhatos.app.affectivereaction.setting.*
+import furhatos.app.affectivereaction.util.discussionQ
 import furhatos.app.affectivereaction.util.iceBreaker
 import furhatos.flow.kotlin.*
 import furhatos.gestures.Gestures
@@ -105,6 +106,19 @@ val Introduction : State = state(Parent) {
             }
         }
 
+    }
+
+    onButton(speakButton.copy(label = "INTRO_ACTIVE_LISTENING")){
+        with(furhat){
+            discussionQ?.INTRO_ACTIVE_LISTENING?.forEach {
+                this.say {
+                    +Gestures.Thoughtful
+                    +it
+                }
+                Thread.sleep(1000)
+            }
+
+        }
     }
 
     var count = 0

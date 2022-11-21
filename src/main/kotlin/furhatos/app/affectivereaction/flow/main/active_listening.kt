@@ -8,21 +8,8 @@ import furhatos.flow.kotlin.furhat
 import furhatos.flow.kotlin.state
 import furhatos.gestures.Gestures
 
-val end = listOf("Ok, nous en avons fini avec cette question", "Je pense que nous avons fait le tout de la question")
+val end = listOf("Ok, nous en avons fini avec cette question", "Je pense que nous avons fait le tour de la question")
 val ActiveListening : State = state(Parent){
-
-    onButton(speakButton.copy(label = "INTRO_ACTIVE")){
-        with(furhat){
-            discussionQ?.INTRO_ACTIVE_LISTENING?.forEach {
-                this.say {
-                    +Gestures.Thoughtful
-                    +it
-                }
-                Thread.sleep(1000)
-            }
-
-        }
-    }
 
     onButton(speakButton.copy(label = "START")){
         with(furhat){

@@ -24,6 +24,18 @@
 		"Pourquoi utilisez-vous les réseaux sociaux ?"
 	],
 
+	"Climat": [
+		"Est-ce que vous suivez l'actualité concernant la crise climatique en France ?",
+		"Avez-vous lu ou pris connaissance du rapport publié en 2021 par l'ADEME sur la transition écologique ?",
+		"Est-ce que vous connaissez un exemple de recommandation concernant la crise climatique ?"
+	],
+
+	"Sport": [
+		"Est-ce que vous pratiquez un sport ou plusieurs sports ?",
+		"A quel point suivez-vous les actualités sportives ?",
+		"Est-ce qu’un sport en particulier vous intéresse ?"
+	],
+
 	"INTRO_SocialNetwork": [
 		"L'explosion d'Internet a été le point de départ pour de nombreuses révolutions technologiques et culturelles de l'histoire.",
 		"L'émergence des résaux sociaux en est un exemple marquant.",
@@ -50,6 +62,25 @@
 		"L'élection présidentielle française de 2022 a lieu les 10 et 24 avril 2022 afin d'élire le président de la République française pour un mandat de cinq ans.\n\nIl s'agit de la douzième élection présidentielle de la Ve République et onzième au suffrage universel direct.",
 		" Aucun des douze candidats en lice n'ayant remporté la majorité absolue des suffrages exprimés au premier tour, un second tour est organisé entre les deux premiers candidats.",
 		"Au second tour, c'est donc Emmanuel Macron qui a été élu, avec 58.55% des suffrages exprimés."
+	],
+
+	"INTRO_Climat":[
+		"L'accord de Paris, souvent appelé accord de Paris sur le climat, est un traité international sur le réchauffement climatique adopté en 2015.",
+		"L'objectif à long terme de l'accord de Paris en matière de température est de maintenir l'augmentation de la température moyenne de la planète bien en dessous de 2 degré celsius par rapport aux niveaux préindustriels, et de préférence de limiter l'augmentation à 1,5 degré celsius",
+		"Notamment, les émissions nettes causées par l'homme en CO2 doivent tomber, à zéro, d'ici à 2050, pour un réchauffement global limité à 1,5 degré, d'après un rapport du G I E C, un organisme créé par l'ONU",
+		"En France, l'Agence de la transition écologique, ou ADEME, facilite ou réalise des opérations de protection de l'environnement et la maîtrise de l'énergie",
+		"En 2021, elle a publié quatre scénarios « types » qui présentent de manière, volontairement contrastée, des options économiques, techniques et de société pour atteindre la neutralité carbone en 2050.",
+		"Durant notre discussion, je ferai référence à des éléments proposé dans leurs différents scénarios."
+	],
+
+	"INTRO_Sport": [
+		"En novembre 2022, le Qatar devient le plus petit État à accueillir un événement sportif majeur de l’importance de la coupe du monde de football.",
+		" Situé au cœur du Golfe Persique et au milieu de la zone très aride de la péninsule arabique, le petit Émirat a connu une forte croissance démographique et économique à partir des années 1980.",
+		" Il est par la suite devenu l’un des pays les plus riches du monde avec un PIB par habitant atteignant 70.000 dollars en 2021.",
+		"Ce Mondial sera de loin le plus cher de l'histoire. En effet, l'Émirat a déboursé pas moins de 220 milliards de dollars pour accueillir la compétition.",
+		" Le précédent record s'élevait à 15 milliards de dollars pour la coupe du monde de 2014 organisée au Brésil.",
+		"Cet événement, qui a suscité des polémiques à travers le monde, est loin d’être le seul dans le sport.",
+		"C’est pourquoi, nous allons aujourd’hui discuter de l’influence de l’argent dans le sport."
 	],
 
 	"INTRO_GENERAL": [

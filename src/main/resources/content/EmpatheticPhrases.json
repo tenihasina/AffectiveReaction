@@ -2,31 +2,23 @@
         "socialEmpatheticPhrases": ["ah super !",
 									"super !",
 									"bien !",
-									"ah c'est sympa.",
+									"ah c'est intéressant.",
 									"c'est sympa.",
 									"umm, c'est sympa.",
 									"umm c'est bien d'entendre ça.",
-									"vous vous en sortez bien.",
 									"ah c'est merveilleux à entendre.",
-									"umm c'est bien alors.",
-									"ah ça a l’air vraiment bien !",
-									"c'est super à entendre !",
 									"Je suis content d'entendre ça.",
-									"ça a l’air vraiment sympa.",
 									"umm, sympa.",
 									"ah sympa.",
-									"ça a l’air vraiment bien !",
-									"C'est vraiment cool."
+									"C'est vraiment bien."
 									],
         "happyEmpatheticPhrases": ["ah super !",
 									"super !",
 									"bien !",
 									"ah c'est sympa.",
 									"c'est sympa.",
-									"ah ça a l'air intéressant.",
-									"c'est chouette d'entendre ça.",
-									"vous vous en sortez bien.",
-									"ah c'est merveilleux à entendre.",
+									"Intéressant !",
+									"c'est intéressant d'entendre ça.",
 									"umm c'est bien alors.",
 									"ah ça a l’air vraiment bien !",
 									"ça n’a pas l’air mal.",
@@ -56,15 +48,13 @@
 									"oh non, je suis vraiment désolé d'entendre ça", 
 									"Je suis désolé d'apprendre que vous avez subi",
 									"Merci, ça n'a pas toujours été facile !",
-									"Oh non, je suis désolé d'entendre ça.",
 									"ça a dû être dur pour vous.",
 									"Oui, c'est une chose difficile à gérer.",
-									"Ça doit être si difficile."
+									"Ça doit être difficile d'en discuter."
 									],
         
-         "encouragingEmpatheticPhrases" :["C'est courageux ce que tu dis",
+         "encouragingEmpatheticPhrases" :["C'est courageux d'en discuter",
 											" J'espère que les choses vont mieux désormais.",								"J'espère que tout se passe mieux désormais.",
-											"tu continues à avancer.",
 											"J'espère que ça va mieux désormais !",
 											"j'espère que tout se passe bien maintenant !",
 											"J'espère que vous vous sentez mieux.",
@@ -72,11 +62,12 @@
 											],
          
          
-         "showInterestEmpatheticPhrases" : ["Comment est-ce que ça a été pour vous ?",
-											"Pourriez-vous développer, s'il vous plaît, comment vous l’avez vécu ?", 
-											 "Je veux être sûr de comprendre... Comment avez-vous vécu cela ?",
-											"Pourriez-vous développer, s'il vous plaît, je veux être sûr de comprendre." 
+         "showInterestEmpatheticPhrases" : ["Vous semblez très intéressé par le sujet",
+											"Vous avez l'air engagé par le sujet",
+											 "Je vous sens passionné par le sujet",
+											"Vous avez l'air très intéressé par le sujet"
 											],
+
 		"showAngerEmpatheticPhrases" : [
 			"Je comprends, ça doit être frustrant d'en parler",
 			"En effet, c'est terrible",
@@ -97,12 +88,11 @@
 		"showSurpriseEmpatheticPhrases" : [
 			"C'est incroyable !",
 			"Je ne savais pas",
-			"Aaah !"
+			"C'est très surprenant !"
 		],
          "gratitudeEmpatheticPhrases" :  ["Merci d'avoir partagé cela avec moi.",
-										"Je suis heureux que vous me l'ayez dit.",
-										"Merci de m'avoir fait confiance. Cela signifie vraiment beaucoup.",
-										"Ça doit être difficile d'en parler. Merci de vous être ouvert(e) à moi."
+										"Je suis content que l'on puisse en parler",
+										"Ça doit être difficile d'en parler. Merci de vous être ouvert à nous."
 										]
 
 

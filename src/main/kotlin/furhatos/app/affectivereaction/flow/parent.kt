@@ -7,7 +7,6 @@ import furhatos.app.affectivereaction.setting.*
 import furhatos.flow.kotlin.*
 import furhatos.gestures.Gestures
 
-
 val thanks = listOf("Super", "Merci", "OK !")
 val Parent: State = state {
 
@@ -27,16 +26,25 @@ val Parent: State = state {
         furhat.attend(location_FRONT)
     }
 
-    onButton(turnButton.copy(label = "LEFT")){
-        furhat.attend(location_LEFT)
+    onButton(turnButton.copy(label = "NAME LEFT")){
+        with(furhat) {
+            attend(location_LEFT)
+            mapParticipants[location_LEFT]?.let { it1 -> say(it1) }
+        }
     }
 
-    onButton(turnButton.copy(label = "RIGHT")){
-        furhat.attend(location_RIGHT)
+    onButton(turnButton.copy(label = "NAME RIGHT")){
+        with(furhat) {
+            attend(location_RIGHT)
+            mapParticipants[location_RIGHT]?.let { it1 -> say(it1) }
+        }
     }
 
-    onButton(turnButton.copy(label = "FRONT")){
-        furhat.attend(location_FRONT)
+    onButton(turnButton.copy(label = "NAME FRONT")){
+        with(furhat) {
+            attend(location_FRONT)
+            mapParticipants[location_FRONT]?.let { it1 -> say(it1) }
+        }
     }
 
     onButton(turnButton.copy(label = mapParticipants[location_LEFT].toString())) {

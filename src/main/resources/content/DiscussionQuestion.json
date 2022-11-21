@@ -39,6 +39,22 @@
     "Devrait-on limiter l'usage des réseaux sociaux au travail ?"
   ],
 
+  "Climat": [
+    "Dans le scénario Génération frugale proposé par l'ADEME, la consommation de viande et d'électricité pour les usages spécifiques  comme l'electroménager, l'électronique et l'éclairage sont divisés par 3 en 2050 pour limiter le gaspillage énergétique. Que pensez-vous de ces recommandations? Souhaitez-vous les suivre ?",
+    "Dans un sondage réalisé par l'ADEME, 62% des français pensent que les menus végétariens obligatoires en restauration collective font partie des solutions à mettre en place face au changement climatique. Et vous ? Est-ce que ça affecterait vos habitudes ?",
+    "Dans un sondage réalisé par l'ADEME, les préoccupations des français sont, en premier lieu la santé, en second la transition écologique et troisièmement l'immigration. Et vous, avez-vous les mêmes priorités ?",
+    "Dans un sondage pour Ouest-France, 36 % des français disent ne pas pouvoir faire du covoiturage et de l’autopartage, et 31 % ne pas pouvoir prendre les transports en commun à la place de leur voiture. D'après vous, devrait-on contraindre tous les usagers à prendre des véhicules moins polluants ?",
+    "Dans le scénario Pari réparateur proposé par l'ADEME, la consommation de masse est sauvegardé en 2050. La consommation de viande est quasi-stable car elle est complétée par des protéines de synthèse ou végétales. Est-cela que ça peut vous affecter personellement ?",
+    "Avez-vous déja subi ou rencontré des personnes ayant subi les conséquences de la crise climatique ? Pouvez-vous nous raconter votre ressenti ? "
+  ],
+
+  "Sport": [
+    "Un des sujets les plus polémiques actuellement est celui de la différence de salaire entre hommes et femmes dans le sport. A titre d’exemple, les joueurs masculins de l’équipe de France de football ont perçu une prime de 400000 euros après le sacre du Mondial de 2018. Celle prévue pour les femmes en cas de victoire est d’environ 40000 euros. Est-ce que vous êtes choqué par cet écart? Est-ce que cela vous paraît normal ?",
+    "Dans le football, les sommes pour les transferts de joueurs et les salaires qu’ils perçoivent peuvent atteindre des sommes folles. Notamment, Kylian Mbappé touchait un salaire de 30 millions d’euros en 2021, puis 100 millions d’euros net en 2022 avec une prime de 300 millions à la signature. D'après vous, est-ce normal qu’un sportif ou une sportive puisse toucher des sommes aussi élevées ? ",
+    "Le sport peut être aujourd’hui considéré comme un business florissant. Il représente environ 2% du PIB mondial, soit l’équivalent d’un pays comme le Luxembourg ou Cuba. Certains disent que les athlètes ne courent plus après les titres mais après un gros chèque. Est-ce que cette affirmation vous choque ?"
+    
+  ],
+
   "INTRO_ACTIVE_LISTENING": [
     "L'écoute fait partie intégrante d'une communication efficace",
     " La plupart des gens\nentendent leurs partenaires plutôt que de les écouter. ",

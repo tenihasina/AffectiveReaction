@@ -15,15 +15,18 @@ import furhatos.util.random
 val reactionButton = Button(label = "reaction button", section = Section.RIGHT, color = Color.Red)
 
 var current_question = ""
+val neutral = dialogueCues?.let { Question(it.socialEmpatheticPhrases) }
+val happy = dialogueCues?.let { Question(it.happyEmpatheticPhrases) }
+val sad = dialogueCues?.let { Question(it.sadEmpatheticPhrases) }
+val anger = dialogueCues?.let { Question(it.showAngerEmpatheticPhrases) }
+val surprise = dialogueCues?.let { Question(it.showSurpriseEmpatheticPhrases) }
+val disgust = dialogueCues?.let { Question(it.showDisgustEmpatheticPhrases) }
+val fear = dialogueCues?.let { Question(it.showFearEmpatheticPhrases) }
 
 val Discussion : State = state(Parent) {
 
     onButton(navigationButton.copy(label = "CONCLUSION")){
         goto(Conclusion)
-    }
-
-    onButton(navigationButton.copy(label = "CONFLICT")){
-        goto(ActiveListening)
     }
 
 
@@ -80,9 +83,12 @@ val Discussion : State = state(Parent) {
     onButton(reactionButton.copy(label = "HAPPY")) {
         furhat.say {
             +Gestures.BigSmile(strength = 20.0)
-            if (dialogueCues != null) {
-                +dialogueCues.happyEmpatheticPhrases.random().toString()
+            if (happy != null) {
+                +happy.nextQuestion()
             }
+//            if (dialogueCues != null) {
+//                +dialogueCues.happyEmpatheticPhrases.random().toString()
+//            }
         }
     }
 
@@ -90,71 +96,89 @@ val Discussion : State = state(Parent) {
         furhat.say {
             +Gestures.ExpressSad(strength = 20.0)
             if (dialogueCues != null) {
-                +dialogueCues.sadEmpatheticPhrases.random().toString()
+//                +dialogueCues.sadEmpatheticPhrases.random().toString()
+                if (sad != null) {
+                    +sad.nextQuestion()
+                }
             }
         }
     }
 
-    onButton(reactionButton.copy(label = "ENCOURAGE")) {
-        furhat.say {
-            +Gestures.Thoughtful
-            if (dialogueCues != null) {
-                +dialogueCues.encouragingEmpatheticPhrases.random().toString()
-            }
-        }
-    }
+//    onButton(reactionButton.copy(label = "ENCOURAGE")) {
+//        furhat.say {
+//            +Gestures.Thoughtful
+//            if (dialogueCues != null) {
+//                +dialogueCues.encouragingEmpatheticPhrases.random().toString()
+//            }
+//        }
+//    }
 
-    onButton(reactionButton.copy(label = "INTEREST")) {
-        furhat.say {
-            +Gestures.Surprise
-            if (dialogueCues != null) {
-                +dialogueCues.showInterestEmpatheticPhrases.random().toString()
-            }
-        }
-    }
+//    onButton(reactionButton.copy(label = "INTEREST")) {
+//        furhat.say {
+//            +Gestures.Surprise
+//            if (dialogueCues != null) {
+//                +dialogueCues.showInterestEmpatheticPhrases.random().toString()
+//            }
+//        }
+//    }
 
     onButton(reactionButton.copy(label = "NEUTRE")) {
         furhat.say {
             +Gestures.Nod
-            if (dialogueCues != null) {
-                +dialogueCues.showInterestEmpatheticPhrases.random().toString()
+            if (neutral != null) {
+                +neutral.nextQuestion()
             }
+//            if (dialogueCues != null) {
+//                +dialogueCues.socialEmpatheticPhrases.random().toString()
+//            }
         }
     }
 
     onButton(reactionButton.copy(label = "FEAR")) {
         furhat.say {
             +Gestures.ExpressFear
-            if (dialogueCues != null) {
-                +dialogueCues.showFearEmpatheticPhrases.random().toString()
+            if (fear != null) {
+                +fear.nextQuestion()
             }
+//            if (dialogueCues != null) {
+//                +dialogueCues.showFearEmpatheticPhrases.random().toString()
+//            }
         }
     }
 
     onButton(reactionButton.copy(label = "ANGER")) {
         furhat.say {
             +Gestures.Thoughtful(strength = 20.0, duration = 5000.0)
-            if (dialogueCues != null) {
-                +dialogueCues.showAngerEmpatheticPhrases.random().toString()
+            if (anger != null) {
+                +anger.nextQuestion()
             }
+//            if (dialogueCues != null) {
+//                +dialogueCues.showAngerEmpatheticPhrases.random().toString()
+//            }
         }
     }
 
     onButton(reactionButton.copy(label = "DISGUST")) {
         furhat.say {
             +Gestures.ExpressDisgust
-            if (dialogueCues != null) {
-                +dialogueCues.showDisgustEmpatheticPhrases.random().toString()
+            if (disgust != null) {
+                +disgust.nextQuestion()
             }
+//            if (dialogueCues != null) {
+//                +dialogueCues.showDisgustEmpatheticPhrases.random().toString()
+//            }
         }
     }
 
     onButton(reactionButton.copy(label = "SURPRISE")) {
         furhat.say {
             +Gestures.Surprise
-            if (dialogueCues != null) {
-                +dialogueCues.showSurpriseEmpatheticPhrases.random().toString()
+            if (surprise != null) {
+                +surprise.nextQuestion()
             }
+//            if (dialogueCues != null) {
+//                +dialogueCues.showSurpriseEmpatheticPhrases.random().toString()
+//            }
         }
     }
 }

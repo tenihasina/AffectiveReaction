@@ -43,7 +43,7 @@ val WoZ : State = state(Parent) {
         furhat.say {
             +Gestures.Smile
             if (dialogueCues != null) {
-                +dialogueCues.happyEmpatheticPhrases.random().toString()
+                +dialogueCues.socialEmpatheticPhrases.random().toString()
             }
         }
     }

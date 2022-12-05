@@ -13,7 +13,7 @@ import furhatos.nlu.common.TellName
 
 val turnButton = Button(label = "turn management", section = Section.RIGHT, color = Color.Green)
 val speakButton = Button(label = "speech", section = Section.RIGHT, color = Color.Red)
-
+var current_ice_breaker = ""
 fun glanceAll(furhat:Furhat){
     listPositions.forEach { 
         furhat.glance(it, 1000)
@@ -48,7 +48,18 @@ val IceBreaker : State = state(Parent) {
             if (question != null) {
 //                glanceAll(furhat)
 //                attendAll()
-                say(question.nextQuestion())
+                current_ice_breaker = question.nextQuestion()
+                say(current_ice_breaker)
+            }
+        }
+    }
+
+    onButton(speakButton.copy(label = "REPEAT")){
+        with(furhat){
+            say{
+                +"la question était la suivante :"
+                +Gestures.Thoughtful
+                +current_ice_breaker
             }
         }
     }

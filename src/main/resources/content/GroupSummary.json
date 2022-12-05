@@ -9,31 +9,34 @@
 	],
 	"NNN": [
 		"Il me semble que cette question a suscité des réactions fortes, c'est tout à fait normal",
-		"Je vous ai senti moins à l'aise vis-à-vis de cette question, mais ce n'est pas grave du tout"
+		"J'ai senti que le sujet n'est pas forcément agréable pour vous, mais ce n'est pas grave du tout"
 	],
 	"PON": [
 		"Il me semble que cette question a suscité des réactions assez différentes parmi vous, c'est très intéressant !",
 		"Cette question semble avoir provoqué des réactions plutôt diverses, ce qui est complètement normal"
 	],
 	"PP": [
-		"Il semble que vous soyez tous les deux plus à l'aise sur ce sujet",
-		"Il me semble que vous avez tous les deux des attitudes plus positifs sur ce sujet"
+		"Il semble que vous soyez tous les deux assez engagés sur le sujet",
+		"Il me semble que vous avez tous les deux des attitudes plus positives sur ce sujet"
 	],
 	"OO": [
 		"Il semble que vous souhaitez tous les deux rester factuels sur le sujet",
-		"Rester détaché du sujet est complètement normal"
+		"Je vous ai senti plus neutre sur la question, mais rester détaché du sujet est complètement normal"
 	],
 	"NN": [
-		"Je comprends que ce soit un sujet difficile pour vous deux, merci d'avoir donné votre opinion dessus",
+		"Merci d'avoir donné votre opinion dessus, j'ai senti que ce n'était pas forcément agréable d'en parler",
 		"Ce n'est pas simple de discuter sur ce sujet, merci à vous deux d'avoir donné vos feedbacks"
 	],
 	"P": [
-		"Il semble que vous vous sentez à l'aise sur ce sujet"
+		"Il semble que tu es à l'aise sur ce sujet",
+		"J'ai senti que le sujet était plus agréable pour toi"
 	],
 	"O": [
-		"Il me semble que vous êtes plutôt détaché du sujet, ce qui est complètement normal"
+		"Il me semble que tu es plutôt détaché du sujet, ce qui est complètement normal",
+		"Tu m'as paru plutôt neutre dans la discussion"
 	],
 	"N": [
-		"Il me semble que ce n'était pas un sujet facile pour vous, je vous remercie d'avoir joué le jeu"
+		"Il me semble que ce n'était pas forcément un sujet agréable pour toi, je te remercie d'avoir joué le jeu",
+		"J'ai senti que ce n'était pas forcément un sujet agréable pour vous, je vous remercie d'avoir donné votre opinion"
 	]
 }

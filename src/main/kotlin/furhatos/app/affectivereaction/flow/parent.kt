@@ -1,21 +1,25 @@
 package furhatos.app.affectivereaction.flow
 
 import furhatos.app.affectivereaction.flow.main.Idle
+import furhatos.app.affectivereaction.flow.main.Question
 import furhatos.app.affectivereaction.flow.main.speakButton
 import furhatos.app.affectivereaction.flow.main.turnButton
 import furhatos.app.affectivereaction.setting.*
 import furhatos.flow.kotlin.*
 import furhatos.gestures.Gestures
 
-val thanks = listOf("Super", "Merci", "OK !")
+val lThanks = listOf("Super", "Merci", "OK !", "Très bien", "D'accord")
+val thanks = Question(lThanks)
+val lclear = listOf("Est-ce que les instructions sont claires ?", "Est-ce que c'est clair ?", "C'est ok pour tout le monde ?", "Tout le monde a compris ?")
+val clear = Question(lclear)
 val Parent: State = state {
 
-    onUserLeave(instant = true) {
-        when {
-            users.count == 0 -> goto(Idle)
-            it == users.current -> furhat.attend(users.other)
-        }
-    }
+//    onUserLeave(instant = true) {
+//        when {
+//            users.count == 0 -> goto(Idle)
+//            it == users.current -> furhat.attend(users.other)
+//        }
+//    }
 
     onUserEnter(instant = true) {
         furhat.glance(it)
@@ -111,7 +115,7 @@ val Parent: State = state {
 //            attendAll()
             say{
                 +Gestures.Thoughtful(strength = 20.0, duration = 5000.0)
-                +"Est-ce que les instructions sont claires ?"
+                +clear.nextQuestion()
             }
         }
     }
@@ -122,7 +126,7 @@ val Parent: State = state {
 //            attendAll()
             say{
                 +Gestures.BigSmile(strength = 20.0, duration = 2000.0)
-                +thanks.random().toString()
+                +thanks.nextQuestion()
             }
         }
     }

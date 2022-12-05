@@ -13,6 +13,7 @@ data class DiscussionQuestion(
     val SocialNetwork:List<String>,
     val Climat:List<String>,
     val Sport:List<String>,
+    val Prison:List<String>,
     val INTRO_ACTIVE_LISTENING:List<String>
 ) {
     companion object {

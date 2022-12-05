@@ -1,56 +1,37 @@
 {
-        "socialEmpatheticPhrases": ["ah super !",
-									"super !",
-									"bien !",
-									"ah c'est intéressant.",
-									"c'est sympa.",
-									"umm, c'est sympa.",
-									"umm c'est bien d'entendre ça.",
-									"ah c'est merveilleux à entendre.",
-									"Je suis content d'entendre ça.",
-									"umm, sympa.",
-									"ah sympa.",
-									"C'est vraiment bien."
+        "socialEmpatheticPhrases": [
+									"Merci d'avoir partagé cela avec moi.",
+									"Je suis heureux que vous me l'ayez dit.",
+									"D'accord, merci d'avoir partagé ça avec nous",
+									"D'accord",
+									"C'est une opinion assez objective, c'est intéressant à entendre",
+									"C'est assez factuel comme réponse, merci d'avoir partagé ça avec nous",
+									"Merci, c'est intéressant à entendre",
+									"Je comprends votre opinion, vous avez une position plutôt objective sur le sujet",
+									"Ok, c'est intéressant !",
+									"Merci, c'est très clair comme réponse",
+									"Ok ! C'est intéressant.",
+									"Merci, c'est intéressant d'entendre ça",
+									"umm c'est intéressant d'entendre ça.",
+									"ah c'est intéressant à entendre."
 									],
-        "happyEmpatheticPhrases": ["ah super !",
-									"super !",
-									"bien !",
-									"ah c'est sympa.",
-									"c'est sympa.",
-									"Intéressant !",
+        "happyEmpatheticPhrases": ["Super ! Merci pour ton intervention",
+									"C'est intéressant, tu as l'air content d'en parler !",
+									"Merci, c'est sympa d'en avoir parlé.",
+									"Intéressant ! Je sens que tu es heureux d'en parler",
 									"c'est intéressant d'entendre ça.",
-									"umm c'est bien alors.",
-									"ah ça a l’air vraiment bien !",
-									"ça n’a pas l’air mal.",
-									"c'est super à entendre !",
+									"D'accord ! Merci pour ta réponse",
+									"Je sens que tu es heureux d'en parler !",
+									"c'est super d'entendre ça !",
 									"Je suis content d'entendre ça.",
-									"umm C'est une bonne chose.",
-									"ah ça a l'air génial !.",
-									"Génial !",
-									"C'est génial !",
-									"ça a l’air vraiment sympa.",
-									"umm, sympa.",
-									"ah sympa.",
-									"ça a l’air vraiment bien !",
-									"C'est vraiment cool."
+									"C'est intéressant, merci à toi",
+									"Tu as l'air content d'en parler"
 									],
 									
-		"sadEmpatheticPhrases"  : ["oh ! c'est pas génial.",
-									"oh ! c'est malheureux.",
-									"oh c'est dur.",
-									"oh ça a dû être dur pour vous.",
-									"ça a l'air vraiment éprouvant !",
-									"cela a dû être si difficile.",
-									"ça a l'air vraiment difficile.",
-									"je peux voir comment cela a pu être difficile.",
-									"ce genre de chose n'est jamais facile.",
-									"je suis vraiment désolé d'entendre ça.", 
-									"oh non, je suis vraiment désolé d'entendre ça", 
-									"Je suis désolé d'apprendre que vous avez subi",
-									"Merci, ça n'a pas toujours été facile !",
-									"ça a dû être dur pour vous.",
-									"Oui, c'est une chose difficile à gérer.",
-									"Ça doit être difficile d'en discuter."
+		"sadEmpatheticPhrases"  : ["Je sens que cette question vous a attristé. Je vous remercie d'avoir partagé votre opinion malgré tout",
+									"Merci, ce n'est pas un sujet facile",
+									"je peux voir comment cela a pu être compliqué d'en parler",
+									"ce genre de sujet n'est pas facile."
 									],
         
          "encouragingEmpatheticPhrases" :["C'est courageux d'en discuter",
@@ -69,21 +50,24 @@
 											],
 
 		"showAngerEmpatheticPhrases" : [
-			"Je comprends, ça doit être frustrant d'en parler",
+			"Je comprends votre colère, c'est vraiment frustrant",
 			"En effet, c'est terrible",
-			"Merci, cela a du être difficile d'en parler"
+			"Merci, ça peut être difficile d'en parler",
+			"Je comprends ta colère, merci d'avoir partagé ta réponse",
+			"Effectivement, je serai aussi en colère à ta place"
 		],
 		"showDisgustEmpatheticPhrases" : [
 			"C'est terrible !",
 			"Oh non !",
-			"Ca a l'air de vous avoir beaucoup affecté"
+			"Ca a l'air de vous avoir dégouté",
+			"Ah oui, c'est horrible"
 		],
 
 		"showFearEmpatheticPhrases" : [
-			"C'est terrifiant !",
+			"C'est terrifiant, je te remercie d'en avoir parlé malgré tout.",
 			"Je n'arrive pas à y croire",
 			"Cela doit être traumatisant",
-			"Aaah !"
+			"A ta place, moi aussi je serai terrifié !"
 		],
 		"showSurpriseEmpatheticPhrases" : [
 			"C'est incroyable !",

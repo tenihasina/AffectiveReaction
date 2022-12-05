@@ -15,7 +15,12 @@ val Summary : State = state(ResetHead) {
     onButton(navigationButton.copy(label = "REACTIONS")){
         goto(Discussion)
     }
-    onButton(speakButton.copy(label = "PPP")){
+
+    onButton(navigationButton.copy(label = "CONFLICT")){
+        goto(ActiveListening)
+    }
+
+    onButton(speakButton.copy(label = "POS")){
         with(furhat){
             say {
                 if (groupSummary != null) {
@@ -24,7 +29,7 @@ val Summary : State = state(ResetHead) {
             }
         }
     }
-    onButton(speakButton.copy(label = "OOO")){
+    onButton(speakButton.copy(label = "NEU")){
         with(furhat){
             say {
                 if (groupSummary != null) {
@@ -33,7 +38,7 @@ val Summary : State = state(ResetHead) {
             }
         }
     }
-    onButton(speakButton.copy(label = "NNN")){
+    onButton(speakButton.copy(label = "NEG")){
         with(furhat){
             say {
                 if (groupSummary != null) {
@@ -112,7 +117,7 @@ val Summary : State = state(ResetHead) {
 }
 
 val StatementMajority : State = state(ResetHead) {
-    onButton(speakButton.copy(label = "PP")){
+    onButton(speakButton.copy(label = "POS")){
         with(furhat){
             glanceAll(furhat)
             if (groupSummary != null) {
@@ -124,7 +129,7 @@ val StatementMajority : State = state(ResetHead) {
         goto(Summary)
     }
 
-    onButton(speakButton.copy(label = "OO")){
+    onButton(speakButton.copy(label = "NEU")){
         with(furhat){
             glanceAll(furhat)
             if (groupSummary != null) {
@@ -136,7 +141,7 @@ val StatementMajority : State = state(ResetHead) {
         goto(Summary)
     }
 
-    onButton(speakButton.copy(label = "NN")){
+    onButton(speakButton.copy(label = "NEG")){
         with(furhat){
             glanceAll(furhat)
             if (groupSummary != null) {
@@ -151,7 +156,7 @@ val StatementMajority : State = state(ResetHead) {
 
 val StatementMinority: State = state {
 
-    onButton(speakButton.copy(label = "P")) {
+    onButton(speakButton.copy(label = "POS")) {
         with(furhat){
             if (groupSummary != null) {
                 say(
@@ -162,7 +167,7 @@ val StatementMinority: State = state {
         goto(Summary)
     }
 
-    onButton(speakButton.copy(label = "O")) {
+    onButton(speakButton.copy(label = "NEU")) {
         with(furhat){
             if (groupSummary != null) {
                 say(
@@ -173,7 +178,7 @@ val StatementMinority: State = state {
         goto(Summary)
     }
 
-    onButton(speakButton.copy(label = "N")) {
+    onButton(speakButton.copy(label = "NEG")) {
         with(furhat){
             if (groupSummary != null) {
                 say(
@@ -183,4 +188,6 @@ val StatementMinority: State = state {
         }
         goto(Summary)
     }
+
+
 }

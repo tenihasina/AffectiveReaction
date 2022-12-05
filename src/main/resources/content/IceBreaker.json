@@ -36,6 +36,12 @@
 		"Est-ce qu’un sport en particulier vous intéresse ?"
 	],
 
+	"Prison": [
+		"Avant de démarrer notre interaction, est-ce que vous connaissiez la différence entre justice punitive et la justice réparatrice ?",
+		"Est-ce que vous êtes informés sur les conditions de vie en prison, ou plus généralement sur le système judiciaire  en France?",
+		"Suivez-vous les actualités concernant les décisions de justice ou la police ?"
+	],
+
 	"INTRO_SocialNetwork": [
 		"L'explosion d'Internet a été le point de départ pour de nombreuses révolutions technologiques et culturelles de l'histoire.",
 		"L'émergence des résaux sociaux en est un exemple marquant.",
@@ -83,6 +89,15 @@
 		"C’est pourquoi, nous allons aujourd’hui discuter de l’influence de l’argent dans le sport."
 	],
 
+	"INTRO_Prison": [
+		"Aujourd’hui, nous allons discuter de la manière dont la justice fonctionne.",
+		" Actuellement, il existe notamment deux grandes tendances. La justice réparatrice et la justice punitive.",
+		"Les partisans de la justice réhabilitative ou réparatrice, considèrent que le rôle de la justice est de remettre le condamné sur le bon chemin",
+		"Il est ainsi accompagné tout au long de son parcours.",
+		"A l'inverse, les partisans de la Justice punitive considèrent que le rôle de la justice est dissuasif.",
+		"La justice permet alors d’éviter la récidive chez les condamnés. Mais aussi pour faire des exemples à ne pas suivre pour le reste de la société."
+	],
+
 	"INTRO_GENERAL": [
 		"Bonjour à tous, je vous remercie d'être venus.",
 		"Mon nom est Antonia, et je vous accompagnerai dans nos échanges aujourd'hui.",
@@ -98,7 +113,6 @@
 		"Je vais poser un certains nombre de questions sur le sujet.",
 		"Je vais vous demander d'y répondre un à un, pour avoir votre opinion dessus",
 		"Nous allons essayer d'équilibrer le temps de parole pour tout le monde, et essayer de ne pas prendre plus de 5 minutes sur chaque sujets.",
-		"Il est possible que certains sujets soient plus difficiles à traiter que d'autres, mais je vous encourage à respecter l'opinion de vos collègues.",
-		"Je vais essayer d'intervenir après chaque discussion sur un sujet, pour vous donner mon ressenti par rapport à la manière dont vous avez discuté."
+		"Je vais essayer d'intervenir durant la discussion, pour vous donner mon ressenti par rapport à la manière dont vous avez discuté."
 	]
 }

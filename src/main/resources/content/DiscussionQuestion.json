@@ -54,12 +54,20 @@
     "Le sport peut être aujourd’hui considéré comme un business florissant. Il représente environ 2% du PIB mondial, soit l’équivalent d’un pays comme le Luxembourg ou Cuba. Certains disent que les athlètes ne courent plus après les titres mais après un gros chèque. Est-ce que cette affirmation vous choque ?"
     
   ],
+  
+  "Prison": [
+    "Suite aux multiples attentats terroristes en France, de nombreuses mesures de surveillance ont été mises en place, telles que des patrouilles militaires ou la surveillance des systèmes informatiques. Seriez-vous prêts à sacrifier vos libertés civiles, telles que le droit à l’anonymat sur internet, ou le respect de la vie privée en général, pour être protégé des actes malveillants?",
+    "Depuis quelques années, les violences policières sont un sujet très médiatisé. Par exemple, les tirs de LBD, pour disperser les rassemblements ont causés des blessures graves, voires mortelles, en 2020 durant les manifestations des gilets Jaunes. Pensez-vous que la police doit toujours être armée ?",
+    "Selon une étude réalisée en 2016, 31% des personnes sorties de prison ont de nouveau été condamnées dans l’année de leur libération. D’après vous, les individus qui sortent de prison devraient-ils être aidés dans leur réinsertion?",
+    "La peine plancher est une peine incompressible imposée par la loi. Par exemple, en Italie, la peine minimale pour un meurtre, est de vingt ans d'emprisonnement, quelque soit la raison. Pensez-vous que les sanctions lourdes sont efficaces ?"
+],
 
   "INTRO_ACTIVE_LISTENING": [
-    "L'écoute fait partie intégrante d'une communication efficace",
-    " La plupart des gens\nentendent leurs partenaires plutôt que de les écouter. ",
+    "J'ai une dernière recommandation pour notre session",
+    " La plupart des gens entendent leurs partenaires plutôt que de les écouter. ",
     "Il s'agit pourtant de deux activités distinctes",
-    "Entendre est une activité passive elors que l'écoute est un acte conscient et délibéré.",
-    "Je vais donc vous demander de pratiquer cette compétence tout au long de cette session"
+    "Entendre est une activité passive alors que l'écoute est un acte conscient et délibéré.",
+    "Je vais donc vous demander de pratiquer l'écoute active tout au long de cette session",
+    "Lorsque chaque participant aura donné son opinion, nous aurons une discussion plus ouverte sur chaque sujet"
   ]
 }

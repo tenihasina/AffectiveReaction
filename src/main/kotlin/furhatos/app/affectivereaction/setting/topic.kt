@@ -4,8 +4,8 @@ import furhatos.app.affectivereaction.flow.main.Question
 import furhatos.app.affectivereaction.util.discussionQ
 import furhatos.app.affectivereaction.util.iceBreaker
 
-val question = iceBreaker?.let { Question(it.Sport ) }
+val question = iceBreaker?.let { Question(it.Prison ) }
 val turn_distribution = listOf("Qu'en pensez vous ?", "Est-ce que cela vous parle ?", "Et vous ?")
 val turn_question = Question(turn_distribution)
-val randomQ = discussionQ?.let { Question(it.Sport) }
-val intro = iceBreaker?.INTRO_Sport
+val randomQ = discussionQ?.let { Question(it.Prison) }
+val intro = iceBreaker?.INTRO_Prison

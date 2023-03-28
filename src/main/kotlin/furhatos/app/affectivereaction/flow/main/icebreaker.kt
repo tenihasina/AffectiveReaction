@@ -1,6 +1,7 @@
 package furhatos.app.affectivereaction.flow.main
 
 import furhatos.app.affectivereaction.flow.Menu
+import furhatos.app.affectivereaction.flow.main.Subject
 import furhatos.app.affectivereaction.flow.Parent
 import furhatos.app.affectivereaction.flow.backToMenuButton
 import furhatos.app.affectivereaction.flow.navigationButton
@@ -10,14 +11,18 @@ import furhatos.app.affectivereaction.util.iceBreaker
 import furhatos.flow.kotlin.*
 import furhatos.gestures.Gestures
 import furhatos.nlu.common.TellName
-
 val turnButton = Button(label = "turn management", section = Section.RIGHT, color = Color.Green)
 val speakButton = Button(label = "speech", section = Section.RIGHT, color = Color.Red)
 var current_ice_breaker = ""
+
 fun glanceAll(furhat:Furhat){
     listPositions.forEach { 
         furhat.glance(it, 1000)
     }
+}
+
+fun saveParticipant(name : String, count : Int){
+    mapParticipants[listPositions[count%3]] = name
 }
 
 val IceBreaker : State = state(Parent) {
@@ -31,7 +36,7 @@ val IceBreaker : State = state(Parent) {
 //                Thread.sleep(1000)
                 furhat.say(it)
                 Thread.sleep(1000)
-//                attend(location_RIGHT)
+                glance(listOf(location_FRONT, location_RIGHT, location_LEFT).random(), duration = 2000)
         //                    glanceAll(furhat)
             }
             Thread.sleep(1000)
@@ -48,7 +53,7 @@ val IceBreaker : State = state(Parent) {
             if (question != null) {
 //                glanceAll(furhat)
 //                attendAll()
-                current_ice_breaker = question.nextQuestion()
+                current_ice_breaker = question!!.nextQuestion()
                 say(current_ice_breaker)
             }
         }
@@ -86,7 +91,7 @@ val IceBreaker : State = state(Parent) {
 }
 
 val Introduction : State = state(Parent) {
-
+    var count = 0
     onButton(speakButton.copy(label = "introduction")){
 
         if (iceBreaker != null) {
@@ -132,18 +137,21 @@ val Introduction : State = state(Parent) {
         }
     }
 
-    var count = 0
+
     onButton(turnButton.copy(label = "NAME ?")){
 
         with(furhat){
+            attend(listPositions[count%3])
             if (count == 0){
                 say{
                     +Gestures.Thoughtful
                     +"Pouvez vous me donner votre prénom ?"
                 }
+                listen(timeout = 5000)
                 count += 1
             } else {
-                say ("Et vous")
+                say ("Et vous, quel est votre nom ?")
+                listen(timeout = 5000)
             }
         }
     }
@@ -157,10 +165,26 @@ val Introduction : State = state(Parent) {
                     +Gestures.BigSmile(duration = 3000.0)
                     +"Enchanté $name"
                 }
-                saveParticipant(name)
+                saveParticipant(name, count)
             }
         }
 
+    }
+
+    onNoResponse { // Catches silence
+        with(furhat) {
+            say {
+                +Gestures.ExpressSad(duration = 3000.0)
+                +"Je suis désolé. J'ai du mal à entendre avec le bruit ambiant."
+            }
+            say{
+                +"Je vais devoir vous donner un numéro. Comme si vous étiez un robot."
+                +"Vous serez Humain numéro"
+                +count.toString()
+            }
+            saveParticipant("Humain$count", count)
+            count +=1
+        }
     }
 
     onButton(speakButton.copy(label = "MEMORIZE ALL NAMES")){
@@ -193,6 +217,3 @@ val Introduction : State = state(Parent) {
 
 }
 
-private fun saveParticipant(name : String){
-    mapParticipants[listPositions[(listParticipants.size-1)%3]] = name
-}

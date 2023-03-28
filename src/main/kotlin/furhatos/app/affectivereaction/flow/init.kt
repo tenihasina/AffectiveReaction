@@ -22,6 +22,10 @@ val Menu : State = state() {
         //        goto(WoZ)
     }
 
+    onButton(navigationButton.copy(label = "Choose subject")) {
+        goto(Subject)
+    }
+
     onButton(navigationButton.copy(label = "ICE BREAKER")) {
         goto(IceBreaker)
     }

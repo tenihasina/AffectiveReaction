@@ -9,11 +9,11 @@ val location_RIGHT = Location(-0.6, 0.0, 1.0)
 val location_FRONT = Location(0.0, 0.0, 2.0)
 val listPositions = listOf(location_LEFT, location_RIGHT, location_FRONT)
 //LEFT
-const val p1 = "Baptiste"
+var p1 = "Achille"
 //FRONT
-const val p2 = "Iris"
+var p2 = "Mélodie"
 //RIGHT
-const val p3 = "Corentin"
+var p3 = "Bénédicte"
 var listParticipants = mutableListOf(p1, p2, p3)
 var mapParticipants = mutableMapOf(
     location_LEFT to p1,

@@ -35,7 +35,7 @@ val Discussion : State = state(Parent) {
 //            attend(location_FRONT)
 //            attendAll()
             if (randomQ != null) {
-                current_question = randomQ.nextQuestion()
+                current_question = randomQ!!.nextQuestion()
                 say(current_question)
             }
         }
